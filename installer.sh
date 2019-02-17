@@ -156,14 +156,8 @@ cd $MasterDir
 echo "LETS Server setup is done!"
 
 echo "Installing Redis..."
-wget http://download.redis.io/redis-stable.tar.gz
-tar xvzf redis-stable.tar.gz
-rm redis-stable.tar.gz
-cd redis-stable
-make
-make test
-cd $MasterDir
-echo "redis: Done!"
+apt-get install redis-server
+echo "REDIS Server setup is done!"
 
 echo "Downloading nginx config..."
 mkdir nginx
