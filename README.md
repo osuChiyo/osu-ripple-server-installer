@@ -26,6 +26,7 @@ Make sure you set DNS matched like this
 * old.YOUR-DOMAIN
 
 # Credits
+* <a href=https://github.com/ppy>peppy</a> - Thank you for wonderful game and I'm sorry for your bancho.
 * <a href=https://github.com/osuripple>Ripple</a> - Maybe you're not happy about this... I'm sorry.
 * <a href=https://github.com/osufx>osu!fx</a> - Thanks for the secret module!!
 * <a href=https://github.com/osuthailand>osu!Ainu</a> - Thanks to my own community!!!
