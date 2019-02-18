@@ -25,6 +25,9 @@ Make sure you set DNS matched like this
 * s.YOUR-DOMAIN
 * old.YOUR-DOMAIN
 
+# I need help!
+Don't know how to use it? Join our Discord <a href=https://discord.gg/CX9P73h>here</a>!
+
 # Credits
 * <a href=https://github.com/ppy>peppy</a> - Thank you for wonderful game and I'm sorry for your bancho.
 * <a href=https://github.com/osuripple>Ripple</a> - Maybe you're not happy about this... I'm sorry.
