@@ -133,14 +133,14 @@ wget -O __init__.py https://pastebin.com/raw/gKaPU6C6
 wget -O wifipiano2.py https://pastebin.com/raw/ZraV7iU9
 cd ..
 cp -R $MasterDir/pep.py/common $MasterDir/lets/common
-cd $MasterDir
-cd lets
-cd handlers
-python3.6 setup.py build_ext --inplace
+#uhh what do I do here... hmm I guess I'll do after I'm home
 #TODO: PP CAP
 #cd $MasterDir
 #cd lets
-#uhh what do I do here... hmm I guess I'll do after I'm home
+#cd handlers
+python3.6 setup.py build_ext --inplace
+cd $MasterDir
+cd lets
 git clone https://github.com/osufx/secret
 cd secret
 git submodule init && git submodule update
