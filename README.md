@@ -39,3 +39,7 @@ Don't know how to use it? Join our Discord <a href=https://discord.gg/CX9P73h>he
 * <a href=https://github.com/osukawata>osu!Kawata</a> - <a href=https://github.com/r33int>@r33int</a> You're the best!
 * <a href=https://github.com/osuYozora>osu!Yozora</a> - wow man <a href=https://github.com/osuYozora>@osuYozora</a> Thanks for the past!
 * <a href=https://github.com/EmilySunpy>Sunpy</a> - You know her! Thanks for most commands and dependencies!
+
+# License
+This project is licensed under the GNU AGPL 3 License.
+See the "LICENSE" file for more information.
