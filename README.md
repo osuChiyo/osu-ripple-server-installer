@@ -8,7 +8,7 @@ This Installer just install most things for server! If you want to use custom mo
 It's my Ripple auto installer because I'm lazy to write very very looooooong command to setup it. So I decided to make my own installer!
 
 # How to use it?
-Simple! Just run `sudo sh installer.sh`
+Simple! Just run `./installer.sh`
 Make sure you set DNS matched like this
 
 * YOUR-DOMAIN
