@@ -1,5 +1,6 @@
 #!/bin/sh
 clear
+# THIS SCRIPT IS ORIGINALLY FROM SUNPY #
 printf "This script has to run in sudo mode.\nIf this isn't the case CTRL+C now.\nAlso please don't install this in /root/ but whatever I installed it but I don't really care anyway.\nThis is also meant to be used on a fresh Ubuntu 16.04 install but you can use other OS anyway because this creates a new database etc.\nThis installer is simplistic as its just something I put together so I could easily recreate the server once things change or when I move server around for testing etc.\n\t- Aoba\n"
 
 valid_domain=0
