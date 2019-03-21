@@ -206,10 +206,10 @@ echo "Setting up database..."
 #mysql -uroot -p -e 'USE mysql; UPDATE `user` SET `Host`="%" WHERE `User`="root" AND `Host`="localhost"; DELETE FROM `user` WHERE `Host` != "%" AND `User`="root"; FLUSH PRIVILEGES;'
 #service mysql restart
 # Download custom php file for installation (I could also just run a bunch of sql commands etc in shell but its easier this way)
-wget -O ripple_db.php https://pastebin.com/raw/SkX3atLU
+wget -O ripple.sql https://cdn.discordapp.com/attachments/547063467455021066/551659135997837322/ripple_database.sql
 sed -i 's#DB_USR#'$mysql_usr'#g; s#DB_PSW#'$mysql_psw'#g' ripple_db.php
 mysql -u "$mysql_usr" -p"$mysql_psw" -e 'CREATE DATABASE ripple;'
-php ripple_db.php
+mysql -u "$mysql_usr" -p"$mysql_psw" ripple < ripple.sql
 echo "Database setup is done!"
 
 echo "Deleting go folder for some reason..."
