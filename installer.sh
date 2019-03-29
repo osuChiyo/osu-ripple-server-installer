@@ -257,7 +257,7 @@ cd $MasterDir/avatar-server/avatars
 # DEFAULT AVATAR
 wget -O 0.png https://raw.githubusercontent.com/osuthailand/avatar-server/master/avatars/-1.png
 # AC AVATAR
-wget https://raw.githubusercontent.com/osuthailand/avatar-server/master/avatars/999.png
+wget -O 999.png https://raw.githubusercontent.com/osuthailand/avatar-server/master/avatars/0.png
 cd $MasterDir
 echo "Avatar Server setup is done!"
 
