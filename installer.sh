@@ -82,14 +82,12 @@ pip3 install flask
 
 # i fucked up these php remove this if you want to.
 
-apt-get install php5.6 php5.6-mbstring php5.6-mcrypt php5.6-fpm php5.6-curl php5.6-mysql golang-go -y
-apt-get install php7.0 php7.0-mbstring php7.0-mcrypt php7.0-fpm php7.0-curl php7.0-mysql -y
-apt-get install php7.2 php7.2-mbstring php7.2-mcrypt php7.2-fpm php7.2-curl php7.2-mysql -y
+apt-get install php7.0 php7.0-mbstring php7.0-mcrypt php7.0-fpm php7.0-curl php7.0-mysql golang-go -y
 
 # edit code to remove garbage shit
 # composer install for old-frontend
 apt-get install composer -y
-apt-get install zip unzip php5.6-zip php7.0-zip php7.2-zip -y
+apt-get install zip unzip php7.0-zip -y
 
 echo "Done installing dependencies!"
 mkdir ripple
@@ -172,9 +170,7 @@ echo "REDIS Server setup is done!"
 echo "Downloading nginx config..."
 mkdir nginx
 cd nginx
-systemctl restart php5.6-fpm
 systemctl restart php7.0-fpm
-systemctl restart php7.2-fpm
 pkill -f nginx
 cd /etc/nginx/
 rm -rf nginx.conf
