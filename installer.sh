@@ -133,6 +133,8 @@ rm -rf __init__.py
 wget -O __init__.py https://pastebin.com/raw/gKaPU6C6
 wget -O wifipiano2.py https://pastebin.com/raw/ZraV7iU9
 cd ..
+cd $MasterDir/lets
+rm -rf common/
 cp -R $MasterDir/pep.py/common $MasterDir/lets/common
 #uhh what do I do here... hmm I guess I'll do after I'm home
 #TODO: PP CAP
@@ -203,7 +205,6 @@ echo "Setting up database..."
 #service mysql restart
 # Download custom php file for installation (I could also just run a bunch of sql commands etc in shell but its easier this way)
 wget -O ripple.sql https://cdn.discordapp.com/attachments/547063467455021066/551659135997837322/ripple_database.sql
-sed -i 's#DB_USR#'$mysql_usr'#g; s#DB_PSW#'$mysql_psw'#g' ripple_db.php
 mysql -u "$mysql_usr" -p"$mysql_psw" -e 'CREATE DATABASE ripple;'
 mysql -u "$mysql_usr" -p"$mysql_psw" ripple < ripple.sql
 echo "Database setup is done!"
