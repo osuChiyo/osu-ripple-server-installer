@@ -19,7 +19,7 @@ Make sure you set DNS matched like this
 * old.YOUR-DOMAIN
 
 # I need help!
-~~Don't know how to use it? Join our Discord <a href=https://discord.gg/CX9P73h>here</a>!~~
+~~Don't know how to use it? Join our Discord <a href=https://discord.gg/CX9P73h>here</a>!~~<br>
 Sadly, We need to close our Discord. but still you can still ask me by opening Issue.
 
 # Credits
