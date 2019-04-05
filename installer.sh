@@ -116,10 +116,8 @@ echo "Bancho Server setup is done!"
 echo "Setting up LETS server & oppai..."
 git clone https://zxq.co/ripple/lets
 cd lets
-git submodule init && git submodule update
 python3.6 -m pip install -r requirements.txt
-python3.6 setup.py build_ext --inplace
-echo "Downloading patch from osu!thailand (Ainu)"
+echo "Downloading patches"
 cd pp
 rm -rf oppai-ng/
 git clone https://github.com/Francesco149/oppai-ng
@@ -133,8 +131,8 @@ rm -rf __init__.py
 wget -O __init__.py https://pastebin.com/raw/gKaPU6C6
 wget -O wifipiano2.py https://pastebin.com/raw/ZraV7iU9
 cd ..
-cd $MasterDir/lets
 #IT WAS A STUPID IDEA TO COPY COMMON FROM PEP.PY
+rm -rf common
 git clone https://zxq.co/ripple/ripple-common-python
 mv ripple-common-python/ common/
 #uhh what do I do here... hmm I guess I'll do after I'm home
@@ -142,13 +140,11 @@ mv ripple-common-python/ common/
 #cd $MasterDir
 #cd lets
 #cd handlers
-python3.6 setup.py build_ext --inplace
-cd $MasterDir
-cd lets
 git clone https://github.com/osufx/secret
 cd secret
 git submodule init && git submodule update
 cd ..
+python3.6 setup.py build_ext --inplace
 python3.6 lets.py
 sed -i 's#root#'$mysql_usr'#g; s#changeme#'$peppy_cikey'#g; s#YOUR_OSU_API_KEY_HERE#'$lets_osuapikey'#g' config.ini
 sed -E -i -e 'H;1h;$!d;x' config.ini -e 's#password = #password = '$mysql_psw'#'
