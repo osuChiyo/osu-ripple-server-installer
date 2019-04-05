@@ -147,8 +147,8 @@ cd ..
 python3.6 setup.py build_ext --inplace
 cd helpers
 rm -rf config.py
-wget -O config.py https://pastebin.com/raw/LnS8QpGK
-sed -i 's#root#'$mysql_usr'#g; s#mysqlpsw#'$mysql_psw'#g; s#changeme#'$peppy_cikey'#g; s#YOUR_OSU_API_KEY_HERE#'$lets_osuapikey'#g; s#http://cheesegu.ll/api#'https://cg.mxr.lol/api'#g' config.py
+wget -O config.py https://pastebin.com/raw/E0zUvLuU
+sed -i 's#root#'$mysql_usr'#g; s#mysqlpsw#'$mysql_psw'#g; s#DOMAIN#'$domain'#g; s#changeme#'$peppy_cikey'#g; s#YOUR_OSU_API_KEY_HERE#'$lets_osuapikey'#g; s#http://cheesegu.ll/api#'https://cg.mxr.lol/api'#g' config.py
 cd ..
 python3.6 lets.py
 #TODO: oppai-ng
