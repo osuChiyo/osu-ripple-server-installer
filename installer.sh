@@ -207,9 +207,6 @@ mysql -u "$mysql_usr" -p"$mysql_psw" -e 'CREATE DATABASE ripple;'
 mysql -u "$mysql_usr" -p"$mysql_psw" ripple < ripple.sql
 echo "Database setup is done!"
 
-echo "Deleting go folder for some reason..."
-rm -rf /root/go
-
 echo "Setting up hanayo..."
 mkdir hanayo
 cd hanayo
