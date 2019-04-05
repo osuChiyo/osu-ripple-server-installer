@@ -294,19 +294,10 @@ nginx
 echo "Setup is done... but I guess it's still indevelopment I need to check something but It took $DIFF seconds. To setup the server!"
 echo "also you can access PhpMyAdmin here... http://old.$domain/phpmyadmin"
 
-printf "\n\nShould you like to download the tmux autorun? [y/n]: "
+printf "\n\nDo you like our installer? [y/n]: "
 read q
 if [ "$q" = "y" ]; then
-	apt-get install tmux -y
-	echo '#!/bin/sh' > tmux-start.sh
-	echo "tmux new-session -d -s avatar-server 'tmux set remain-on-exit on && cd avatar-server && ./avatar-server'" >> tmux-start.sh
-	echo "tmux new-session -d -s lets 'tmux set remain-on-exit on && cd lets && python3.6 lets.py'" >> tmux-start.sh
-	echo "tmux new-session -d -s bancho 'tmux set remain-on-exit on && cd pep.py && python3.6 pep.py'" >> tmux-start.sh
-	echo "tmux new-session -d -s api 'tmux set remain-on-exit on && cd rippleapi && ./rippleapi'" >> tmux-start.sh
-	echo "tmux new-session -d -s hanayo 'tmux set remain-on-exit on && cd hanayo && ./hanayo'" >> tmux-start.sh
-	echo "echo TMUX window has been created. If they die restart them by calling ':respawn-window'" >> tmux-start.sh
-	chmod 777 tmux-start.sh
-	printf "\n\nAlright! You can start the server by running ./tmux-start.sh\n\nSee you later in the next server.\n\n"
+	printf "\n\nWell... It just a fake message but thanks! You can start the server now.\n\nAlright! See you later in the next server!\n\n"
 fi
 
 }
