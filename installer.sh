@@ -133,8 +133,8 @@ wget -O wifipiano2.py https://pastebin.com/raw/ZraV7iU9
 cd ..
 #IT WAS A STUPID IDEA TO COPY COMMON FROM PEP.PY
 rm -rf common
-git clone https://zxq.co/ripple/ripple-common-python
-mv ripple-common-python/ common/
+git clone https://zxq.co/ripple/ripple-python-common
+mv ripple-python-common/ common/
 #uhh what do I do here... hmm I guess I'll do after I'm home
 #TODO: PP CAP
 #cd $MasterDir
