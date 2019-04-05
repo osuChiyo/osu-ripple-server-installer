@@ -164,7 +164,7 @@ cd $MasterDir
 echo "LETS Server setup is done!"
 
 echo "Installing Redis..."
-apt-get install redis-server
+apt-get install redis-server -y
 echo "REDIS Server setup is done!"
 
 echo "Downloading nginx config..."
