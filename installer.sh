@@ -41,6 +41,9 @@ printf "\n\n..:: LETS SERVER::.."
 printf "\nosuapi-apikey [YOUR_OSU_API_KEY_HERE]: "
 read lets_osuapikey
 lets_osuapikey=${lets_osuapikey:=YOUR_OSU_API_KEY_HERE}
+printf "\nPP Cap [700]: "
+read pp_cap
+pp_cap=${pp_cap:=700}
 
 printf "\n\n..:: FRONTEND ::.."
 printf "\nPort [6969]: "
@@ -135,11 +138,8 @@ cd ..
 rm -rf common
 git clone https://zxq.co/ripple/ripple-python-common
 mv ripple-python-common/ common/
-#uhh what do I do here... hmm I guess I'll do after I'm home
-#TODO: PP CAP
-#cd $MasterDir
-#cd lets
-#cd handlers
+cd $MasterDir/lets/handlers
+sed -i 's#700#'$pp_cap'#g' submitModularHandler.pyx
 git clone https://github.com/osufx/secret
 cd secret
 git submodule init && git submodule update
