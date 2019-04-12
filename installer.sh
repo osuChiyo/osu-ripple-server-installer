@@ -140,6 +140,7 @@ git clone https://zxq.co/ripple/ripple-python-common
 mv ripple-python-common/ common/
 cd $MasterDir/lets/handlers
 sed -i 's#700#'$pp_cap'#g' submitModularHandler.pyx
+cd $MasterDir/lets
 git clone https://github.com/osufx/secret
 cd secret
 git submodule init && git submodule update
