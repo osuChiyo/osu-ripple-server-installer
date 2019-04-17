@@ -103,7 +103,7 @@ git submodule init && git submodule update
 python3.6 -m pip install -r requirements.txt
 python3.6 setup.py build_ext --inplace
 python3.6 pep.py
-sed -i 's#root#'$mysql_usr'#g; s#changeme#'$peppy_cikey'#g' config.ini
+sed -i 's#root#'$mysql_usr'#g; s#changeme#'$peppy_cikey'#g'; s#http://.../letsapi#'http://127.0.0.1:5002/letsapi'#g; s#http://cheesegu.ll/api#'https://cg.mxr.lol/api'#g' config.ini
 sed -E -i -e 'H;1h;$!d;x' config.ini -e 's#password = #password = '$mysql_psw'#'
 cd $MasterDir
 echo "Bancho Server setup is done!"
