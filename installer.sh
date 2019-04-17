@@ -179,9 +179,9 @@ wget -O nginx.conf https://pastebin.com/raw/9aduuq4e
 sed -i 's#include /root/ripple/nginx/*.conf\*#include '$MasterDir'/nginx/*.conf#' /etc/nginx/nginx.conf
 cd $MasterDir
 cd nginx
-wget -O nginx.conf https://pastebin.com/raw/a3p3G5cZ
+wget -O nginx.conf https://pastebin.com/raw/B4hWMmZn
 sed -i 's#DOMAIN#'$domain'#g; s#DIRECTORY#'$MasterDir'#g; s#6969#'$hanayo_port'#g' nginx.conf
-wget -O old-frontend.conf https://pastebin.com/raw/SHqBYR7y
+wget -O old-frontend.conf https://pastebin.com/raw/bMXE2m6n
 sed -i 's#DOMAIN#'$domain'#g; s#DIRECTORY#'$MasterDir'#g; s#6969#'$hanayo_port'#g' old-frontend.conf
 echo "Downloading certificate..."
 wget -O cert.pem https://raw.githubusercontent.com/osuthailand/ainu-certificate/master/cert.pem
