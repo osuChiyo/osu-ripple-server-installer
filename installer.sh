@@ -97,6 +97,7 @@ mkdir ripple
 cd ripple
 
 echo "Downloading Bancho server..."
+cd $MasterDir
 git clone https://zxq.co/ripple/pep.py
 cd pep.py
 git submodule init && git submodule update
