@@ -104,8 +104,8 @@ git submodule init && git submodule update
 python3.6 -m pip install -r requirements.txt
 # CREDIT PART (if you hates me... remive these line)
 cd handlers
-rm -rf mainHandlers.pyx
-wget -O mainHandlers.pyx https://pastebin.com/raw/HG9Khfux
+rm -rf mainHandler.pyx
+wget -O mainHandler.pyx https://pastebin.com/raw/HG9Khfux
 cd ..
 # remove till this
 python3.6 setup.py build_ext --inplace
