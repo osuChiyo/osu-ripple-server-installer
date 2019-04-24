@@ -102,10 +102,12 @@ git clone https://zxq.co/ripple/pep.py
 cd pep.py
 git submodule init && git submodule update
 python3.6 -m pip install -r requirements.txt
+# CREDIT PART (if you hates me... remive these line)
 cd handlers
 rm -rf mainHandlers.pyx
-wget -O mainHandlers.pyx https://pastebin.com/raw/xFmWFXqs
+wget -O mainHandlers.pyx https://pastebin.com/raw/HG9Khfux
 cd ..
+# remove till this
 python3.6 setup.py build_ext --inplace
 python3.6 pep.py
 sed -i 's#root#'$mysql_usr'#g; s#changeme#'$peppy_cikey'#g'; s#http://.../letsapi#'http://127.0.0.1:5002/letsapi'#g; s#http://cheesegu.ll/api#'https://cg.mxr.lol/api'#g' config.ini
