@@ -104,7 +104,7 @@ git submodule init && git submodule update
 python3.6 -m pip install -r requirements.txt
 cd handlers
 rm -rf mainHandlers.pyx
-wget -O mainHandlers.pyx https://pastebin.com/raw/VsK5tsUC
+wget -O mainHandlers.pyx https://pastebin.com/raw/xFmWFXqs
 cd ..
 python3.6 setup.py build_ext --inplace
 python3.6 pep.py
