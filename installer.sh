@@ -74,7 +74,7 @@ apt-get update
 sudo apt-get install build-essential autoconf libtool pkg-config python-opengl python-imaging python-pyrex python-pyside.qtopengl idle-python2.7 qt4-dev-tools qt4-designer libqtgui4 libqtcore4 libqt4-xml libqt4-test libqt4-script libqt4-network libqt4-dbus python-qt4 python-qt4-gl libgle3 python-dev -y	 
 sudo add-apt-repository ppa:deadsnakes/ppa -y
 sudo apt-get update
-apt-get install python3.6 python3.6-dev -y
+apt-get install python3 python3-dev -y
 add-apt-repository ppa:ondrej/php -y
 add-apt-repository ppa:longsleep/golang-backports -y
 apt-get update
