@@ -9,6 +9,7 @@ It's my Ripple auto installer because I'm lazy to write very very looooooong com
 
 # How to use it?
 It's simple. Firstly, you need to download it by either downloading it from GitHub, or running this command: `cd /root/ && git clone https://github.com/Hazuki-san/ripple-auto-installer/ && cd ripple-auto-installer/ && mv installer.sh /home/ && cd /home/`
+
 After you do this, copy, paste and run the command: `chmod +x installer.sh && ./installer.sh`, and it will take you into the install process!
 
 Make sure you set your DNS like this:
