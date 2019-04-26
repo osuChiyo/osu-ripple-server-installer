@@ -8,7 +8,8 @@ This Installer just install most things for server! If you want to use custom mo
 It's my Ripple auto installer because I'm lazy to write very very looooooong command to setup it. So I decided to make my own installer!
 
 # How to use it?
-It's simple. Firstly, you need to download it by either downloading it from GitHub, or running this command: `cd /root/ && git clone https://github.com/Hazuki-san/ripple-auto-installer/ && cd ripple-auto-installer/ && mv installer.sh /home/`
+It's simple. Firstly, you need to download it by either downloading it from GitHub, or running this command: `cd /root/ && git clone https://github.com/Hazuki-san/ripple-auto-installer/ && cd ripple-auto-installer/ && mv installer.sh /home/ && cd /home/`
+After you do this, copy, paste and run the command: `chmod +x installer.sh && ./installer.sh`, and it will take you into the install process!
 
 Make sure you set your DNS like this:
 
@@ -20,8 +21,7 @@ Make sure you set your DNS like this:
 * old.YOUR-DOMAIN
 
 # I need help!
-~~Don't know how to use it? Join our Discord <a href=https://discord.gg/CX9P73h>here</a>!~~<br>
-Sadly, We need to close our Discord. but still you can still ask me by opening Issue.
+Sadly, there was a problem, and we had to close our discord. Please ask for help via Discord DMs or through Github Issues.
 
 # Credits
 * <a href=https://github.com/ppy>peppy</a> - Thank you for the wonderful game and I'm sorry for your bancho.
