@@ -83,12 +83,8 @@ apt-get install python-dev libmysqlclient-dev nginx software-properties-common l
 pip3 install --upgrade pip
 pip3 install flask
 
-# i fucked up these php remove this if you want to.
-
 apt-get install php7.0 php7.0-mbstring php7.0-mcrypt php7.0-fpm php7.0-curl php7.0-mysql golang-go -y
 
-# edit code to remove garbage shit
-# composer install for old-frontend
 apt-get install composer -y
 apt-get install zip unzip php7.0-zip -y
 
@@ -102,7 +98,7 @@ git clone https://zxq.co/ripple/pep.py
 cd pep.py
 git submodule init && git submodule update
 python3.6 -m pip install -r requirements.txt
-# CREDIT PART (if you hates me... remive these line)
+# CREDIT PART (if you hates me... remove these line)
 cd handlers
 rm -rf mainHandler.pyx
 wget -O mainHandler.pyx https://pastebin.com/raw/HG9Khfux
@@ -114,14 +110,6 @@ sed -i 's#root#'$mysql_usr'#g; s#changeme#'$peppy_cikey'#g'; s#http://.../letsap
 sed -E -i -e 'H;1h;$!d;x' config.ini -e 's#password = #password = '$mysql_psw'#'
 cd $MasterDir
 echo "Bancho Server setup is done!"
-
-# UNUSED CODE BECAUSE ITS TOO OLD LOL
-#echo "Setting up oppai..."
-#git clone https://github.com/Francesco149/oppai.git
-#cd oppai/pyoppai
-#python3.5 setup.py install
-#cd $MasterDir
-#echo "oppai: Done!"
 
 echo "Setting up LETS server & oppai..."
 git clone https://zxq.co/ripple/lets
@@ -157,17 +145,6 @@ cd helpers
 rm -rf config.py
 wget -O config.py https://pastebin.com/raw/E0zUvLuU
 sed -i 's#root#'$mysql_usr'#g; s#mysqlpsw#'$mysql_psw'#g; s#DOMAIN#'$domain'#g; s#changeme#'$peppy_cikey'#g; s#YOUR_OSU_API_KEY_HERE#'$lets_osuapikey'#g; s#http://cheesegu.ll/api#'https://cg.mxr.lol/api'#g' config.py
-#TODO: oppai-ng
-#mkdir .data
-#cd .data
-#mkdir oppai
-#cd oppai
-#git init
-#git remote add origin https://github.com/osuripple/oppai.git
-#git pull origin master
-#make
-#chmod +x oppai
-#mkdir maps
 cd $MasterDir
 echo "LETS Server setup is done!"
 
@@ -199,17 +176,7 @@ cd $MasterDir
 echo "NGINX server setup is done!"
 
 echo "Setting up database..."
-# SOME IMPORTANT THING
-#dpkg-reconfigure -f noninteractive tzdata
-#ufw enable
-#ufw allow 3306
-#echo "mysql-server-5.6 mysql-server/root_password password root" | debconf-set-selections
-#echo "mysql-server-5.6 mysql-server/root_password_again password root" | debconf-set-selections
-#mysql_secure_installation
-#sed -i 's#127\.0\.0\.1#0\.0\.0\.0#g' /etc/mysql/my.cnf
-#mysql -uroot -p -e 'USE mysql; UPDATE `user` SET `Host`="%" WHERE `User`="root" AND `Host`="localhost"; DELETE FROM `user` WHERE `Host` != "%" AND `User`="root"; FLUSH PRIVILEGES;'
-#service mysql restart
-# Download custom php file for installation (I could also just run a bunch of sql commands etc in shell but its easier this way)
+# Download SQL filder
 wget -O ripple.sql https://cdn.discordapp.com/attachments/547063467455021066/551659135997837322/ripple_database.sql
 mysql -u "$mysql_usr" -p"$mysql_psw" -e 'CREATE DATABASE ripple;'
 mysql -u "$mysql_usr" -p"$mysql_psw" ripple < ripple.sql
@@ -222,7 +189,6 @@ go get -u zxq.co/ripple/hanayo
 mv /root/go/bin/hanayo ./
 mv /root/go/src/zxq.co/ripple/hanayo/data ./data
 mv /root/go/src/zxq.co/ripple/hanayo/scripts ./scripts
-mv /root/go/src/zxq.co/ripple/hanayo/sematic ./sematic
 mv /root/go/src/zxq.co/ripple/hanayo/static ./static
 mv /root/go/src/zxq.co/ripple/hanayo/templates ./templates
 mv /root/go/src/zxq.co/ripple/hanayo/website-docs ./website-docs
