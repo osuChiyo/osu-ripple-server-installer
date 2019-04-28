@@ -2,7 +2,7 @@
 Aoba's Ripple osu! server installer!
 
 # Note
-This Installer just install most things for server! If you want to use custom modify, You need to edit it yourself. and please fork this project if you use it!
+This Installer just install most things for server! If you want to use custom modify, You need to edit it yourself. and please fork this project if you use it! (THIS IS NOT DESIGNED FOR WINDOWS!)
 
 # What the heck is it?
 It's my Ripple auto installer because I'm lazy to write very very looooooong command to setup it. So I decided to make my own installer!
