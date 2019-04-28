@@ -29,7 +29,7 @@ You ask for help via Discord DMs or through Github Issues.<br>
 # Credits
 * <a href=https://github.com/ppy>peppy</a> - Thank you for the wonderful game and I'm sorry for your bancho.
 * <a href=https://github.com/osuripple>Ripple</a> - Maybe you're not too happy about this... I'm sorry.
-* <a href=https://github.com/osufx>osu!fx</a> - Thanks for the secret module owo (even though its ratted owo)
+* <a href=https://github.com/osufx>osu!fx</a> - Thanks for the secret module!
 * <a href=https://github.com/osuthailand>osu!Ainu</a> - Thanks to Ainu for the support!! <3
 * <a href=https://github.com/osukawata>osu!Kawata</a> - <a href=https://github.com/r33int>@r33int</a> You're the best! TYSM for helping out <3
 * <a href=https://github.com/osuYozora>osu!Yozora</a> - wow man <a href=https://github.com/osuYozora>@osuYozora</a> Thanks for the past!
