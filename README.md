@@ -1,4 +1,5 @@
 # ripple-auto-installer
+<b>**THIS SCRIPT IS NOT FOR LOCAL PC**</b><br>
 Aoba's Ripple osu! server installer!
 
 # Note
