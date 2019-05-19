@@ -22,7 +22,7 @@ Make sure you set your DNS like this:
 * old.YOUR-DOMAIN
 
 # I need help!
-You ask for help via Discord DMs or through Github Issues.<br>
+You can ask for help via Discord DMs or through Github Issues.<br>
 <br>
 @Aoba Suzukaze#9999 - Aoba (Hazuki-san)
 
