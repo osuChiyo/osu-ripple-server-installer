@@ -177,7 +177,7 @@ echo "NGINX server setup is done!"
 
 echo "Setting up database..."
 # Download SQL filder
-wget -O ripple.sql https://cdn.discordapp.com/attachments/547063467455021066/551659135997837322/ripple_database.sql
+wget -O ripple.sql https://raw.githubusercontent.com/Hazuki-san/ripple-auto-installer/master/ripple_database.sql
 mysql -u "$mysql_usr" -p"$mysql_psw" -e 'CREATE DATABASE ripple;'
 mysql -u "$mysql_usr" -p"$mysql_psw" ripple < ripple.sql
 echo "Database setup is done!"
