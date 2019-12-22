@@ -1,8 +1,8 @@
 -- --------------------------------------------------------
--- Host:                         ainu.pw
+-- Host:                         ripple.pw
 -- Server version:               5.7.28-0ubuntu0.18.04.4 - (Ubuntu)
 -- Server OS:                    Linux
--- Default Ainu Database by Hazuki-san
+-- HeidiSQL Version:             9.5.0.5196
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -12,44 +12,44 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
 
--- Dumping database structure for ainu
-CREATE DATABASE IF NOT EXISTS `ainu` /*!40100 DEFAULT CHARACTER SET latin1 */;
-USE `ainu`;
+-- Dumping database structure for Ainu
+CREATE DATABASE IF NOT EXISTS `ripple` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `ripple`;
 
--- Dumping structure for table ainu.2fa
+-- Dumping structure 2fa
 CREATE TABLE IF NOT EXISTS `2fa` (
   `userid` int(11) NOT NULL,
   `ip` int(11) NOT NULL,
   PRIMARY KEY (`userid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table ainu.2fa: ~0 rows (approximately)
+-- Dumping data 2fa: ~0 rows (approximately)
 /*!40000 ALTER TABLE `2fa` DISABLE KEYS */;
 /*!40000 ALTER TABLE `2fa` ENABLE KEYS */;
 
--- Dumping structure for table ainu.2fa_telegram
+-- Dumping structure 2fa_telegram
 CREATE TABLE IF NOT EXISTS `2fa_telegram` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `userid` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table ainu.2fa_telegram: ~0 rows (approximately)
+-- Dumping data 2fa_telegram: ~0 rows (approximately)
 /*!40000 ALTER TABLE `2fa_telegram` DISABLE KEYS */;
 /*!40000 ALTER TABLE `2fa_telegram` ENABLE KEYS */;
 
--- Dumping structure for table ainu.2fa_totp
+-- Dumping structure 2fa_totp
 CREATE TABLE IF NOT EXISTS `2fa_totp` (
   `enabled` tinyint(1) NOT NULL DEFAULT '0',
   `userid` int(11) NOT NULL,
   PRIMARY KEY (`userid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table ainu.2fa_totp: ~0 rows (approximately)
+-- Dumping data 2fa_totp: ~0 rows (approximately)
 /*!40000 ALTER TABLE `2fa_totp` DISABLE KEYS */;
 /*!40000 ALTER TABLE `2fa_totp` ENABLE KEYS */;
 
--- Dumping structure for table ainu.achievements
+-- Dumping structure achievements
 CREATE TABLE IF NOT EXISTS `achievements` (
   `id` int(11) NOT NULL,
   `name` text CHARACTER SET latin1 NOT NULL,
@@ -59,7 +59,7 @@ CREATE TABLE IF NOT EXISTS `achievements` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table ainu.achievements: ~97 rows (approximately)
+-- Dumping data achievements: ~97 rows (approximately)
 /*!40000 ALTER TABLE `achievements` DISABLE KEYS */;
 INSERT INTO `achievements` (`id`, `name`, `description`, `icon`, `version`) VALUES
 	(1, '500 Combo (osu!std)', '500 big ones! You\'re moving up in the world!', 'osu-combo-500', 1),
@@ -161,7 +161,7 @@ INSERT INTO `achievements` (`id`, `name`, `description`, `icon`, `version`) VALU
 	(97, 'Don\'t let the bunny distract you!', 'The order was indeed, not a rabbit.', 'all-secret-bunny', 6);
 /*!40000 ALTER TABLE `achievements` ENABLE KEYS */;
 
--- Dumping structure for table ainu.badges
+-- Dumping structure badges
 CREATE TABLE IF NOT EXISTS `badges` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(21485) NOT NULL,
@@ -169,7 +169,7 @@ CREATE TABLE IF NOT EXISTS `badges` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1005 DEFAULT CHARSET=utf8;
 
--- Dumping data for table ainu.badges: ~13 rows (approximately)
+-- Dumping data badges: ~13 rows (approximately)
 /*!40000 ALTER TABLE `badges` DISABLE KEYS */;
 INSERT INTO `badges` (`id`, `name`, `icon`) VALUES
 	(0, '', ''),
@@ -187,7 +187,7 @@ INSERT INTO `badges` (`id`, `name`, `icon`) VALUES
 	(1004, 'Vanilla God (Certified by Aoba)', 'yellow fa-check');
 /*!40000 ALTER TABLE `badges` ENABLE KEYS */;
 
--- Dumping structure for table ainu.bancho_channels
+-- Dumping structure bancho_channels
 CREATE TABLE IF NOT EXISTS `bancho_channels` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(32) NOT NULL,
@@ -200,7 +200,7 @@ CREATE TABLE IF NOT EXISTS `bancho_channels` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
--- Dumping data for table ainu.bancho_channels: ~7 rows (approximately)
+-- Dumping data bancho_channels: ~7 rows (approximately)
 /*!40000 ALTER TABLE `bancho_channels` DISABLE KEYS */;
 INSERT INTO `bancho_channels` (`id`, `name`, `description`, `public_read`, `public_write`, `status`, `temp`, `hidden`) VALUES
 	(1, '#osu', 'Ainu global chat', 1, 1, 1, 0, 0),
@@ -212,7 +212,7 @@ INSERT INTO `bancho_channels` (`id`, `name`, `description`, `public_read`, `publ
 	(7, '#ranked', 'Rank requests maps will be posted here! (If it\'s ranked.)', 1, 0, 1, 0, 0);
 /*!40000 ALTER TABLE `bancho_channels` ENABLE KEYS */;
 
--- Dumping structure for table ainu.bancho_messages
+-- Dumping structure bancho_messages
 CREATE TABLE IF NOT EXISTS `bancho_messages` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `msg_from_userid` int(11) NOT NULL,
@@ -223,11 +223,11 @@ CREATE TABLE IF NOT EXISTS `bancho_messages` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table ainu.bancho_messages: ~0 rows (approximately)
+-- Dumping data bancho_messages: ~0 rows (approximately)
 /*!40000 ALTER TABLE `bancho_messages` DISABLE KEYS */;
 /*!40000 ALTER TABLE `bancho_messages` ENABLE KEYS */;
 
--- Dumping structure for table ainu.bancho_private_messages
+-- Dumping structure bancho_private_messages
 CREATE TABLE IF NOT EXISTS `bancho_private_messages` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `msg_from_userid` int(11) NOT NULL,
@@ -238,11 +238,11 @@ CREATE TABLE IF NOT EXISTS `bancho_private_messages` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table ainu.bancho_private_messages: ~0 rows (approximately)
+-- Dumping data bancho_private_messages: ~0 rows (approximately)
 /*!40000 ALTER TABLE `bancho_private_messages` DISABLE KEYS */;
 /*!40000 ALTER TABLE `bancho_private_messages` ENABLE KEYS */;
 
--- Dumping structure for table ainu.bancho_settings
+-- Dumping structure bancho_settings
 CREATE TABLE IF NOT EXISTS `bancho_settings` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(32) NOT NULL,
@@ -251,12 +251,12 @@ CREATE TABLE IF NOT EXISTS `bancho_settings` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
--- Dumping data for table ainu.bancho_settings: ~8 rows (approximately)
+-- Dumping data bancho_settings: ~8 rows (approximately)
 /*!40000 ALTER TABLE `bancho_settings` DISABLE KEYS */;
 INSERT INTO `bancho_settings` (`id`, `name`, `value_int`, `value_string`) VALUES
 	(1, 'bancho_maintenance', 0, ''),
 	(2, 'free_direct', 1, ''),
-	(3, 'menu_icon', 1, 'https://i.ppy.sh/logo.png | https://ainu.pw'),
+	(3, 'menu_icon', 1, 'https://i.ppy.sh/logo.png | https://ripple.pw'),
 	(4, 'login_messages', 1, ''),
 	(5, 'restricted_joke', 0, 'You\'re banned from the server.'),
 	(6, 'login_notification', 1, 'Welcome to Ainu!'),
@@ -264,7 +264,7 @@ INSERT INTO `bancho_settings` (`id`, `name`, `value_int`, `value_string`) VALUES
 	(8, 'osu_md5s', 0, '');
 /*!40000 ALTER TABLE `bancho_settings` ENABLE KEYS */;
 
--- Dumping structure for table ainu.bancho_tokens
+-- Dumping structure bancho_tokens
 CREATE TABLE IF NOT EXISTS `bancho_tokens` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `token` varchar(16) CHARACTER SET latin1 NOT NULL,
@@ -281,11 +281,11 @@ CREATE TABLE IF NOT EXISTS `bancho_tokens` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table ainu.bancho_tokens: ~0 rows (approximately)
+-- Dumping data bancho_tokens: ~0 rows (approximately)
 /*!40000 ALTER TABLE `bancho_tokens` DISABLE KEYS */;
 /*!40000 ALTER TABLE `bancho_tokens` ENABLE KEYS */;
 
--- Dumping structure for table ainu.beatmaps
+-- Dumping structure beatmaps
 CREATE TABLE IF NOT EXISTS `beatmaps` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `beatmap_id` int(11) NOT NULL DEFAULT '0',
@@ -318,11 +318,11 @@ CREATE TABLE IF NOT EXISTS `beatmaps` (
   KEY `id_2` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table ainu.beatmaps: ~0 rows (approximately)
+-- Dumping data beatmaps: ~0 rows (approximately)
 /*!40000 ALTER TABLE `beatmaps` DISABLE KEYS */;
 /*!40000 ALTER TABLE `beatmaps` ENABLE KEYS */;
 
--- Dumping structure for table ainu.beatmaps_names
+-- Dumping structure beatmaps_names
 CREATE TABLE IF NOT EXISTS `beatmaps_names` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `beatmap_md5` varchar(32) CHARACTER SET latin1 NOT NULL DEFAULT '',
@@ -330,11 +330,11 @@ CREATE TABLE IF NOT EXISTS `beatmaps_names` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table ainu.beatmaps_names: ~0 rows (approximately)
+-- Dumping data beatmaps_names: ~0 rows (approximately)
 /*!40000 ALTER TABLE `beatmaps_names` DISABLE KEYS */;
 /*!40000 ALTER TABLE `beatmaps_names` ENABLE KEYS */;
 
--- Dumping structure for table ainu.beatmaps_rating
+-- Dumping structure beatmaps_rating
 CREATE TABLE IF NOT EXISTS `beatmaps_rating` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
@@ -343,11 +343,11 @@ CREATE TABLE IF NOT EXISTS `beatmaps_rating` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table ainu.beatmaps_rating: ~0 rows (approximately)
+-- Dumping data beatmaps_rating: ~0 rows (approximately)
 /*!40000 ALTER TABLE `beatmaps_rating` DISABLE KEYS */;
 /*!40000 ALTER TABLE `beatmaps_rating` ENABLE KEYS */;
 
--- Dumping structure for table ainu.clans
+-- Dumping structure clans
 CREATE TABLE IF NOT EXISTS `clans` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` text NOT NULL,
@@ -358,11 +358,11 @@ CREATE TABLE IF NOT EXISTS `clans` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table ainu.clans: ~0 rows (approximately)
+-- Dumping data clans: ~0 rows (approximately)
 /*!40000 ALTER TABLE `clans` DISABLE KEYS */;
 /*!40000 ALTER TABLE `clans` ENABLE KEYS */;
 
--- Dumping structure for table ainu.clans_invites
+-- Dumping structure clans_invites
 CREATE TABLE IF NOT EXISTS `clans_invites` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `clan` int(11) NOT NULL,
@@ -370,11 +370,11 @@ CREATE TABLE IF NOT EXISTS `clans_invites` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table ainu.clans_invites: ~0 rows (approximately)
+-- Dumping data clans_invites: ~0 rows (approximately)
 /*!40000 ALTER TABLE `clans_invites` DISABLE KEYS */;
 /*!40000 ALTER TABLE `clans_invites` ENABLE KEYS */;
 
--- Dumping structure for table ainu.comments
+-- Dumping structure comments
 CREATE TABLE IF NOT EXISTS `comments` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
@@ -389,11 +389,11 @@ CREATE TABLE IF NOT EXISTS `comments` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table ainu.comments: ~0 rows (approximately)
+-- Dumping data comments: ~0 rows (approximately)
 /*!40000 ALTER TABLE `comments` DISABLE KEYS */;
 /*!40000 ALTER TABLE `comments` ENABLE KEYS */;
 
--- Dumping structure for table ainu.discord_roles
+-- Dumping structure discord_roles
 CREATE TABLE IF NOT EXISTS `discord_roles` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `userid` int(11) NOT NULL,
@@ -402,11 +402,11 @@ CREATE TABLE IF NOT EXISTS `discord_roles` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table ainu.discord_roles: ~0 rows (approximately)
+-- Dumping data discord_roles: ~0 rows (approximately)
 /*!40000 ALTER TABLE `discord_roles` DISABLE KEYS */;
 /*!40000 ALTER TABLE `discord_roles` ENABLE KEYS */;
 
--- Dumping structure for table ainu.docs
+-- Dumping structure docs
 CREATE TABLE IF NOT EXISTS `docs` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `doc_name` varchar(255) CHARACTER SET latin1 NOT NULL DEFAULT 'New Documentation File',
@@ -416,11 +416,11 @@ CREATE TABLE IF NOT EXISTS `docs` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
--- Dumping data for table ainu.docs: 0 rows
+-- Dumping data docs: 0 rows
 /*!40000 ALTER TABLE `docs` DISABLE KEYS */;
 /*!40000 ALTER TABLE `docs` ENABLE KEYS */;
 
--- Dumping structure for table ainu.hw_user
+-- Dumping structure hw_user
 CREATE TABLE IF NOT EXISTS `hw_user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `userid` int(11) NOT NULL,
@@ -433,22 +433,22 @@ CREATE TABLE IF NOT EXISTS `hw_user` (
   UNIQUE KEY `userid` (`userid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table ainu.hw_user: ~0 rows (approximately)
+-- Dumping data hw_user: ~0 rows (approximately)
 /*!40000 ALTER TABLE `hw_user` DISABLE KEYS */;
 /*!40000 ALTER TABLE `hw_user` ENABLE KEYS */;
 
--- Dumping structure for table ainu.identity_tokens
+-- Dumping structure identity_tokens
 CREATE TABLE IF NOT EXISTS `identity_tokens` (
   `userid` int(11) NOT NULL,
   `token` varchar(64) CHARACTER SET latin1 NOT NULL,
   UNIQUE KEY `userid` (`userid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table ainu.identity_tokens: ~0 rows (approximately)
+-- Dumping data identity_tokens: ~0 rows (approximately)
 /*!40000 ALTER TABLE `identity_tokens` DISABLE KEYS */;
 /*!40000 ALTER TABLE `identity_tokens` ENABLE KEYS */;
 
--- Dumping structure for table ainu.ip_user
+-- Dumping structure ip_user
 CREATE TABLE IF NOT EXISTS `ip_user` (
   `userid` int(11) NOT NULL,
   `ip` text CHARACTER SET latin1 NOT NULL,
@@ -457,22 +457,22 @@ CREATE TABLE IF NOT EXISTS `ip_user` (
   UNIQUE KEY `userid` (`userid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table ainu.ip_user: ~0 rows (approximately)
+-- Dumping data ip_user: ~0 rows (approximately)
 /*!40000 ALTER TABLE `ip_user` DISABLE KEYS */;
 /*!40000 ALTER TABLE `ip_user` ENABLE KEYS */;
 
--- Dumping structure for table ainu.irc_tokens
+-- Dumping structure irc_tokens
 CREATE TABLE IF NOT EXISTS `irc_tokens` (
   `userid` int(11) NOT NULL DEFAULT '0',
   `token` varchar(32) CHARACTER SET latin1 NOT NULL DEFAULT '',
   UNIQUE KEY `userid` (`userid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table ainu.irc_tokens: ~0 rows (approximately)
+-- Dumping data irc_tokens: ~0 rows (approximately)
 /*!40000 ALTER TABLE `irc_tokens` DISABLE KEYS */;
 /*!40000 ALTER TABLE `irc_tokens` ENABLE KEYS */;
 
--- Dumping structure for table ainu.leaderboard_ctb
+-- Dumping structure leaderboard_ctb
 CREATE TABLE IF NOT EXISTS `leaderboard_ctb` (
   `position` int(10) unsigned NOT NULL,
   `user` int(11) NOT NULL,
@@ -480,11 +480,11 @@ CREATE TABLE IF NOT EXISTS `leaderboard_ctb` (
   PRIMARY KEY (`position`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table ainu.leaderboard_ctb: ~0 rows (approximately)
+-- Dumping data leaderboard_ctb: ~0 rows (approximately)
 /*!40000 ALTER TABLE `leaderboard_ctb` DISABLE KEYS */;
 /*!40000 ALTER TABLE `leaderboard_ctb` ENABLE KEYS */;
 
--- Dumping structure for table ainu.leaderboard_mania
+-- Dumping structure leaderboard_mania
 CREATE TABLE IF NOT EXISTS `leaderboard_mania` (
   `position` int(10) unsigned NOT NULL,
   `user` int(11) NOT NULL,
@@ -492,11 +492,11 @@ CREATE TABLE IF NOT EXISTS `leaderboard_mania` (
   PRIMARY KEY (`position`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table ainu.leaderboard_mania: ~0 rows (approximately)
+-- Dumping data leaderboard_mania: ~0 rows (approximately)
 /*!40000 ALTER TABLE `leaderboard_mania` DISABLE KEYS */;
 /*!40000 ALTER TABLE `leaderboard_mania` ENABLE KEYS */;
 
--- Dumping structure for table ainu.leaderboard_std
+-- Dumping structure leaderboard_std
 CREATE TABLE IF NOT EXISTS `leaderboard_std` (
   `position` int(10) unsigned NOT NULL,
   `user` int(11) NOT NULL,
@@ -504,11 +504,11 @@ CREATE TABLE IF NOT EXISTS `leaderboard_std` (
   PRIMARY KEY (`position`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table ainu.leaderboard_std: ~0 rows (approximately)
+-- Dumping data leaderboard_std: ~0 rows (approximately)
 /*!40000 ALTER TABLE `leaderboard_std` DISABLE KEYS */;
 /*!40000 ALTER TABLE `leaderboard_std` ENABLE KEYS */;
 
--- Dumping structure for table ainu.leaderboard_taiko
+-- Dumping structure leaderboard_taiko
 CREATE TABLE IF NOT EXISTS `leaderboard_taiko` (
   `position` int(10) unsigned NOT NULL,
   `user` int(11) NOT NULL,
@@ -516,11 +516,11 @@ CREATE TABLE IF NOT EXISTS `leaderboard_taiko` (
   PRIMARY KEY (`position`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table ainu.leaderboard_taiko: ~0 rows (approximately)
+-- Dumping data leaderboard_taiko: ~0 rows (approximately)
 /*!40000 ALTER TABLE `leaderboard_taiko` DISABLE KEYS */;
 /*!40000 ALTER TABLE `leaderboard_taiko` ENABLE KEYS */;
 
--- Dumping structure for table ainu.main_menu_icons
+-- Dumping structure main_menu_icons
 CREATE TABLE IF NOT EXISTS `main_menu_icons` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `is_current` int(11) NOT NULL,
@@ -530,13 +530,13 @@ CREATE TABLE IF NOT EXISTS `main_menu_icons` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
--- Dumping data for table ainu.main_menu_icons: ~1 rows (approximately)
+-- Dumping data main_menu_icons: ~1 rows (approximately)
 /*!40000 ALTER TABLE `main_menu_icons` DISABLE KEYS */;
 INSERT INTO `main_menu_icons` (`id`, `is_current`, `file_id`, `name`, `url`) VALUES
 	(1, 1, 'logo', 'Ainu!', 'https://ainu.pw/');
 /*!40000 ALTER TABLE `main_menu_icons` ENABLE KEYS */;
 
--- Dumping structure for table ainu.osin_access
+-- Dumping structure osin_access
 CREATE TABLE IF NOT EXISTS `osin_access` (
   `scope` int(11) NOT NULL DEFAULT '0',
   `created_at` int(11) NOT NULL DEFAULT '0',
@@ -544,11 +544,11 @@ CREATE TABLE IF NOT EXISTS `osin_access` (
   `extra` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table ainu.osin_access: ~0 rows (approximately)
+-- Dumping data osin_access: ~0 rows (approximately)
 /*!40000 ALTER TABLE `osin_access` DISABLE KEYS */;
 /*!40000 ALTER TABLE `osin_access` ENABLE KEYS */;
 
--- Dumping structure for table ainu.osin_client
+-- Dumping structure osin_client
 CREATE TABLE IF NOT EXISTS `osin_client` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `secret` varchar(64) CHARACTER SET latin1 NOT NULL DEFAULT '',
@@ -557,21 +557,21 @@ CREATE TABLE IF NOT EXISTS `osin_client` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table ainu.osin_client: ~0 rows (approximately)
+-- Dumping data osin_client: ~0 rows (approximately)
 /*!40000 ALTER TABLE `osin_client` DISABLE KEYS */;
 /*!40000 ALTER TABLE `osin_client` ENABLE KEYS */;
 
--- Dumping structure for table ainu.osin_client_user
+-- Dumping structure osin_client_user
 CREATE TABLE IF NOT EXISTS `osin_client_user` (
   `client_id` int(11) NOT NULL DEFAULT '0',
   `user` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table ainu.osin_client_user: ~0 rows (approximately)
+-- Dumping data osin_client_user: ~0 rows (approximately)
 /*!40000 ALTER TABLE `osin_client_user` DISABLE KEYS */;
 /*!40000 ALTER TABLE `osin_client_user` ENABLE KEYS */;
 
--- Dumping structure for table ainu.password_recovery
+-- Dumping structure password_recovery
 CREATE TABLE IF NOT EXISTS `password_recovery` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `k` varchar(80) CHARACTER SET latin1 NOT NULL,
@@ -580,11 +580,11 @@ CREATE TABLE IF NOT EXISTS `password_recovery` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
--- Dumping data for table ainu.password_recovery: 0 rows
+-- Dumping data password_recovery: 0 rows
 /*!40000 ALTER TABLE `password_recovery` DISABLE KEYS */;
 /*!40000 ALTER TABLE `password_recovery` ENABLE KEYS */;
 
--- Dumping structure for table ainu.privileges_groups
+-- Dumping structure privileges_groups
 CREATE TABLE IF NOT EXISTS `privileges_groups` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(32) CHARACTER SET latin1 NOT NULL,
@@ -594,7 +594,7 @@ CREATE TABLE IF NOT EXISTS `privileges_groups` (
   UNIQUE KEY `name` (`name`)
 ) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
--- Dumping data for table ainu.privileges_groups: ~13 rows (approximately)
+-- Dumping data privileges_groups: ~13 rows (approximately)
 /*!40000 ALTER TABLE `privileges_groups` DISABLE KEYS */;
 INSERT INTO `privileges_groups` (`id`, `name`, `privileges`, `color`) VALUES
 	(1, 'Banned', 0, ''),
@@ -612,7 +612,7 @@ INSERT INTO `privileges_groups` (`id`, `name`, `privileges`, `color`) VALUES
 	(13, 'Community Manager', 918015, 'success');
 /*!40000 ALTER TABLE `privileges_groups` ENABLE KEYS */;
 
--- Dumping structure for table ainu.profile_backgrounds
+-- Dumping structure profile_backgrounds
 CREATE TABLE IF NOT EXISTS `profile_backgrounds` (
   `uid` int(11) NOT NULL,
   `time` int(11) NOT NULL,
@@ -621,11 +621,11 @@ CREATE TABLE IF NOT EXISTS `profile_backgrounds` (
   PRIMARY KEY (`uid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table ainu.profile_backgrounds: ~0 rows (approximately)
+-- Dumping data profile_backgrounds: ~0 rows (approximately)
 /*!40000 ALTER TABLE `profile_backgrounds` DISABLE KEYS */;
 /*!40000 ALTER TABLE `profile_backgrounds` ENABLE KEYS */;
 
--- Dumping structure for table ainu.rank_requests
+-- Dumping structure rank_requests
 CREATE TABLE IF NOT EXISTS `rank_requests` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `userid` int(11) NOT NULL,
@@ -637,11 +637,11 @@ CREATE TABLE IF NOT EXISTS `rank_requests` (
   UNIQUE KEY `bid` (`bid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table ainu.rank_requests: ~0 rows (approximately)
+-- Dumping data rank_requests: ~0 rows (approximately)
 /*!40000 ALTER TABLE `rank_requests` DISABLE KEYS */;
 /*!40000 ALTER TABLE `rank_requests` ENABLE KEYS */;
 
--- Dumping structure for table ainu.rap_logs
+-- Dumping structure rap_logs
 CREATE TABLE IF NOT EXISTS `rap_logs` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `userid` int(11) NOT NULL,
@@ -651,11 +651,11 @@ CREATE TABLE IF NOT EXISTS `rap_logs` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table ainu.rap_logs: ~0 rows (approximately)
+-- Dumping data rap_logs: ~0 rows (approximately)
 /*!40000 ALTER TABLE `rap_logs` DISABLE KEYS */;
 /*!40000 ALTER TABLE `rap_logs` ENABLE KEYS */;
 
--- Dumping structure for table ainu.remember
+-- Dumping structure remember
 CREATE TABLE IF NOT EXISTS `remember` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `userid` int(11) NOT NULL,
@@ -664,11 +664,11 @@ CREATE TABLE IF NOT EXISTS `remember` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table ainu.remember: ~0 rows (approximately)
+-- Dumping data remember: ~0 rows (approximately)
 /*!40000 ALTER TABLE `remember` DISABLE KEYS */;
 /*!40000 ALTER TABLE `remember` ENABLE KEYS */;
 
--- Dumping structure for table ainu.reports
+-- Dumping structure reports
 CREATE TABLE IF NOT EXISTS `reports` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `from_uid` int(11) NOT NULL,
@@ -679,11 +679,11 @@ CREATE TABLE IF NOT EXISTS `reports` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table ainu.reports: ~0 rows (approximately)
+-- Dumping data reports: ~0 rows (approximately)
 /*!40000 ALTER TABLE `reports` DISABLE KEYS */;
 /*!40000 ALTER TABLE `reports` ENABLE KEYS */;
 
--- Dumping structure for table ainu.rx_beatmap_playcount
+-- Dumping structure rx_beatmap_playcount
 CREATE TABLE IF NOT EXISTS `rx_beatmap_playcount` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
@@ -694,11 +694,11 @@ CREATE TABLE IF NOT EXISTS `rx_beatmap_playcount` (
   UNIQUE KEY `playcount_index` (`user_id`,`beatmap_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table ainu.rx_beatmap_playcount: ~0 rows (approximately)
+-- Dumping data rx_beatmap_playcount: ~0 rows (approximately)
 /*!40000 ALTER TABLE `rx_beatmap_playcount` DISABLE KEYS */;
 /*!40000 ALTER TABLE `rx_beatmap_playcount` ENABLE KEYS */;
 
--- Dumping structure for table ainu.rx_stats
+-- Dumping structure rx_stats
 CREATE TABLE IF NOT EXISTS `rx_stats` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(30) CHARACTER SET latin1 NOT NULL,
@@ -744,13 +744,13 @@ CREATE TABLE IF NOT EXISTS `rx_stats` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
--- Dumping data for table ainu.rx_stats: ~0 rows (approximately)
+-- Dumping data rx_stats: ~0 rows (approximately)
 /*!40000 ALTER TABLE `rx_stats` DISABLE KEYS */;
 INSERT INTO `rx_stats` (`id`, `username`, `username_aka`, `user_color`, `user_style`, `favourite_mode`, `level_std`, `level_taiko`, `level_mania`, `level_ctb`, `total_score_std`, `total_score_taiko`, `total_score_mania`, `total_score_ctb`, `total_hits_std`, `total_hits_taiko`, `total_hits_ctb`, `total_hits_mania`, `playtime_std`, `playtime_taiko`, `playtime_mania`, `playtime_ctb`, `ranked_score_std`, `ranked_score_taiko`, `ranked_score_mania`, `ranked_score_ctb`, `avg_accuracy_std`, `avg_accuracy_taiko`, `avg_accuracy_mania`, `avg_accuracy_ctb`, `playcount_std`, `playcount_taiko`, `playcount_mania`, `playcount_ctb`, `pp_std`, `pp_mania`, `pp_ctb`, `pp_taiko`, `country`, `unrestricted_pp`, `ppboard`) VALUES
 	(1, 'AC', '', 'black', '', 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'JP', 1, 1);
 /*!40000 ALTER TABLE `rx_stats` ENABLE KEYS */;
 
--- Dumping structure for table ainu.scores
+-- Dumping structure scores
 CREATE TABLE IF NOT EXISTS `scores` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `beatmap_md5` varchar(32) CHARACTER SET latin1 NOT NULL DEFAULT '',
@@ -774,11 +774,11 @@ CREATE TABLE IF NOT EXISTS `scores` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table ainu.scores: ~0 rows (approximately)
+-- Dumping data scores: ~0 rows (approximately)
 /*!40000 ALTER TABLE `scores` DISABLE KEYS */;
 /*!40000 ALTER TABLE `scores` ENABLE KEYS */;
 
--- Dumping structure for table ainu.scores_relax
+-- Dumping structure scores_relax
 CREATE TABLE IF NOT EXISTS `scores_relax` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `beatmap_md5` varchar(32) CHARACTER SET latin1 NOT NULL DEFAULT '',
@@ -802,11 +802,11 @@ CREATE TABLE IF NOT EXISTS `scores_relax` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1073741824 DEFAULT CHARSET=utf8;
 
--- Dumping data for table ainu.scores_relax: ~0 rows (approximately)
+-- Dumping data scores_relax: ~0 rows (approximately)
 /*!40000 ALTER TABLE `scores_relax` DISABLE KEYS */;
 /*!40000 ALTER TABLE `scores_relax` ENABLE KEYS */;
 
--- Dumping structure for table ainu.system_settings
+-- Dumping structure system_settings
 CREATE TABLE IF NOT EXISTS `system_settings` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(32) CHARACTER SET latin1 NOT NULL,
@@ -815,7 +815,7 @@ CREATE TABLE IF NOT EXISTS `system_settings` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
--- Dumping data for table ainu.system_settings: ~10 rows (approximately)
+-- Dumping data system_settings: ~10 rows (approximately)
 /*!40000 ALTER TABLE `system_settings` DISABLE KEYS */;
 INSERT INTO `system_settings` (`id`, `name`, `value_int`, `value_string`) VALUES
 	(1, 'website_maintenance', 0, ''),
@@ -830,7 +830,7 @@ INSERT INTO `system_settings` (`id`, `name`, `value_int`, `value_string`) VALUES
 	(10, 'ccreation_enabled', 1, '');
 /*!40000 ALTER TABLE `system_settings` ENABLE KEYS */;
 
--- Dumping structure for table ainu.tokens
+-- Dumping structure tokens
 CREATE TABLE IF NOT EXISTS `tokens` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user` varchar(31) CHARACTER SET latin1 NOT NULL,
@@ -842,11 +842,11 @@ CREATE TABLE IF NOT EXISTS `tokens` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table ainu.tokens: ~0 rows (approximately)
+-- Dumping data tokens: ~0 rows (approximately)
 /*!40000 ALTER TABLE `tokens` DISABLE KEYS */;
 /*!40000 ALTER TABLE `tokens` ENABLE KEYS */;
 
--- Dumping structure for table ainu.users
+-- Dumping structure users
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(15) NOT NULL AUTO_INCREMENT,
   `osuver` varchar(256) DEFAULT NULL,
@@ -873,13 +873,13 @@ CREATE TABLE IF NOT EXISTS `users` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1297 DEFAULT CHARSET=utf8;
 
--- Dumping data for table ainu.users: ~1 rows (approximately)
+-- Dumping data users: ~1 rows (approximately)
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT INTO `users` (`id`, `osuver`, `username`, `username_safe`, `ban_datetime`, `password_md5`, `salt`, `email`, `register_datetime`, `rank`, `allowed`, `latest_activity`, `silence_end`, `silence_reason`, `password_version`, `privileges`, `donor_expire`, `flags`, `achievements_version`, `achievements_0`, `achievements_1`, `notes`) VALUES
 	(999, NULL, 'AC', 'ac', '0', '$2y$10$LWyP3VsgCnr7BxEjq33LqO5Wx.ZQUfFR4ZGCzsiShB2FZ3UcXpOXW', '', 'fo@kab.ot', 1566228790, 4, 1, 1569775752, 0, '', 1, 3145727, 2147483647, 0, 0, 1, 1, '');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
--- Dumping structure for table ainu.users_achievements
+-- Dumping structure users_achievements
 CREATE TABLE IF NOT EXISTS `users_achievements` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
@@ -888,11 +888,11 @@ CREATE TABLE IF NOT EXISTS `users_achievements` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table ainu.users_achievements: ~0 rows (approximately)
+-- Dumping data users_achievements: ~0 rows (approximately)
 /*!40000 ALTER TABLE `users_achievements` DISABLE KEYS */;
 /*!40000 ALTER TABLE `users_achievements` ENABLE KEYS */;
 
--- Dumping structure for table ainu.users_beatmap_playcount
+-- Dumping structure users_beatmap_playcount
 CREATE TABLE IF NOT EXISTS `users_beatmap_playcount` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
@@ -903,11 +903,11 @@ CREATE TABLE IF NOT EXISTS `users_beatmap_playcount` (
   UNIQUE KEY `playcount_index` (`user_id`,`beatmap_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table ainu.users_beatmap_playcount: ~0 rows (approximately)
+-- Dumping data users_beatmap_playcount: ~0 rows (approximately)
 /*!40000 ALTER TABLE `users_beatmap_playcount` DISABLE KEYS */;
 /*!40000 ALTER TABLE `users_beatmap_playcount` ENABLE KEYS */;
 
--- Dumping structure for table ainu.users_relationships
+-- Dumping structure users_relationships
 CREATE TABLE IF NOT EXISTS `users_relationships` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user1` int(11) NOT NULL,
@@ -915,11 +915,11 @@ CREATE TABLE IF NOT EXISTS `users_relationships` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table ainu.users_relationships: ~0 rows (approximately)
+-- Dumping data users_relationships: ~0 rows (approximately)
 /*!40000 ALTER TABLE `users_relationships` DISABLE KEYS */;
 /*!40000 ALTER TABLE `users_relationships` ENABLE KEYS */;
 
--- Dumping structure for table ainu.users_stats
+-- Dumping structure users_stats
 CREATE TABLE IF NOT EXISTS `users_stats` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(30) CHARACTER SET latin1 NOT NULL,
@@ -980,13 +980,13 @@ CREATE TABLE IF NOT EXISTS `users_stats` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1297 DEFAULT CHARSET=utf8;
 
--- Dumping data for table ainu.users_stats: ~1 rows (approximately)
+-- Dumping data users_stats: ~1 rows (approximately)
 /*!40000 ALTER TABLE `users_stats` DISABLE KEYS */;
 INSERT INTO `users_stats` (`id`, `username`, `username_aka`, `user_color`, `user_style`, `ranked_score_std`, `playcount_std`, `total_score_std`, `replays_watched_std`, `ranked_score_taiko`, `playcount_taiko`, `total_score_taiko`, `replays_watched_taiko`, `ranked_score_ctb`, `playcount_ctb`, `total_score_ctb`, `replays_watched_ctb`, `ranked_score_mania`, `playcount_mania`, `total_score_mania`, `replays_watched_mania`, `total_hits_std`, `total_hits_taiko`, `total_hits_ctb`, `total_hits_mania`, `country`, `unrestricted_pp`, `ppboard`, `show_country`, `level_std`, `level_taiko`, `level_ctb`, `level_mania`, `playtime_std`, `playtime_taiko`, `playtime_ctb`, `playtime_mania`, `avg_accuracy_std`, `avg_accuracy_taiko`, `avg_accuracy_ctb`, `avg_accuracy_mania`, `pp_std`, `pp_taiko`, `pp_ctb`, `pp_mania`, `badges_shown`, `safe_title`, `userpage_content`, `play_style`, `favourite_mode`, `prefer_relax`, `custom_badge_icon`, `custom_badge_name`, `can_custom_badge`, `show_custom_badge`, `current_status`) VALUES
 	(999, 'AC', '', 'black', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'JP', 1, 0, 1, 65535, 1, 1, 1, 0, 0, 0, 0, 100.000000000000, 0.000000000000, 0.000000000000, 0.000000000000, 0, 0, 0, 0, '3,4,11,0,0,0', 0, '', 0, 0, 0, '', '', 1, 1, 'Dead');
 /*!40000 ALTER TABLE `users_stats` ENABLE KEYS */;
 
--- Dumping structure for table ainu.user_badges
+-- Dumping structure user_badges
 CREATE TABLE IF NOT EXISTS `user_badges` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user` int(11) NOT NULL,
@@ -994,11 +994,11 @@ CREATE TABLE IF NOT EXISTS `user_badges` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table ainu.user_badges: ~0 rows (approximately)
+-- Dumping data user_badges: ~0 rows (approximately)
 /*!40000 ALTER TABLE `user_badges` DISABLE KEYS */;
 /*!40000 ALTER TABLE `user_badges` ENABLE KEYS */;
 
--- Dumping structure for table ainu.user_clans
+-- Dumping structure user_clans
 CREATE TABLE IF NOT EXISTS `user_clans` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user` int(11) NOT NULL,
@@ -1007,7 +1007,7 @@ CREATE TABLE IF NOT EXISTS `user_clans` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table ainu.user_clans: ~0 rows (approximately)
+-- Dumping data user_clans: ~0 rows (approximately)
 /*!40000 ALTER TABLE `user_clans` DISABLE KEYS */;
 /*!40000 ALTER TABLE `user_clans` ENABLE KEYS */;
 
