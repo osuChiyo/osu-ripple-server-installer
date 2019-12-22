@@ -94,7 +94,7 @@ cd ripple
 
 echo "Downloading Bancho server..."
 cd $MasterDir
-git clone https://zxq.co/ripple/pep.py
+git clone https://github.com/osuthailand/pep.py
 cd pep.py
 git submodule init && git submodule update
 python3.6 -m pip install -r requirements.txt
@@ -112,29 +112,18 @@ cd $MasterDir
 echo "Bancho Server setup is done!"
 
 echo "Setting up LETS server & oppai..."
-git clone https://zxq.co/ripple/lets
+git clone https://github.com/osuthailand/lets
 cd lets
 python3.6 -m pip install -r requirements.txt
+git submodule init && git submodule update
 echo "Downloading patches"
+cd ./pp/oppai-ng/ && chmod +x ./build && ./build && cd ./../../
+cd ./pp/oppai-ng/ && chmod +x ./build && ./build && cd ./../../
 cd pp
-rm -rf oppai-ng/
-git clone https://github.com/Francesco149/oppai-ng
-cd oppai-ng
-./build
-cd ..
-rm -rf catch_the_pp/
-git clone https://github.com/osuripple/catch-the-pp
-mv catch-the-pp/ catch_the_pp/
 rm -rf __init__.py
 wget -O __init__.py https://pastebin.com/raw/gKaPU6C6
 wget -O wifipiano2.py https://pastebin.com/raw/ZraV7iU9
 cd ..
-#IT WAS A STUPID IDEA TO COPY COMMON FROM PEP.PY
-rm -rf common
-git clone https://zxq.co/ripple/ripple-python-common
-mv ripple-python-common/ common/
-cd $MasterDir/lets/handlers
-sed -i 's#700#'$pp_cap'#g' submitModularHandler.pyx
 # difficulty_ctb fix
 cd $MasterDir/lets/objects
 sed -i 's#dataCtb["difficultyrating"]#'dataCtb["diff_aim"]'#g' beatmap.pyx
@@ -144,10 +133,8 @@ cd secret
 git submodule init && git submodule update
 cd ..
 python3.6 setup.py build_ext --inplace
-cd helpers
-rm -rf config.py
-wget -O config.py https://pastebin.com/raw/E0zUvLuU
-sed -i 's#root#'$mysql_usr'#g; s#mysqlpsw#'$mysql_psw'#g; s#DOMAIN#'$domain'#g; s#changeme#'$peppy_cikey'#g; s#YOUR_OSU_API_KEY_HERE#'$lets_osuapikey'#g; s#http://cheesegu.ll/api#'https://cg.mxr.lol/api'#g' config.py
+cd secret
+git submodule init && git submodule update
 cd $MasterDir
 echo "LETS Server setup is done!"
 
@@ -180,7 +167,7 @@ echo "NGINX server setup is done!"
 
 echo "Setting up database..."
 # Download SQL folder
-wget -O ripple.sql https://raw.githubusercontent.com/Hazuki-san/ripple-auto-installer/master/ripple_database.sql
+wget -O ripple.sql https://raw.githubusercontent.com/osuthailand/ripple-auto-installer/master/ripple_database.sql
 mysql -u "$mysql_usr" -p"$mysql_psw" -e 'CREATE DATABASE ripple;'
 mysql -u "$mysql_usr" -p"$mysql_psw" ripple < ripple.sql
 echo "Database setup is done!"
@@ -206,13 +193,13 @@ echo "Hanayo setup is done!"
 echo "Setting up API..."
 mkdir rippleapi
 cd rippleapi
-go get -u zxq.co/ripple/rippleapi
+go get -u github.com/osuthailand/api
 #Ugly fix?
-rm -rf /root/go/src/zxq.co/ripple
-mv /root/go/src/zxq.co/rippleapi /root/go/src/zxq.co/ripple
-go build zxq.co/ripple/rippleapi
+rm -rf /root/go/src/github.com/osuthailand
+mv /root/go/src/github.com/osuthailand /root/go/src/github.com/osuthailand
+go build github.com/osuthailand/api
 mv /root/go/bin/rippleapi ./
-./rippleapi
+./api
 sed -i 's#root@#'$mysql_usr':'$mysql_psw'@#g; s#Potato#'$hanayo_apisecret'#g; s#OsuAPIKey=#OsuAPIKey='$peppy_cikey'#g' api.conf
 cd $MasterDir
 echo "API setup is done!"
