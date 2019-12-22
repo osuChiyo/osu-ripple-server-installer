@@ -1,5 +1,5 @@
 -- --------------------------------------------------------
--- Host:                         ripple.pw
+-- Host:                         ainu.pw
 -- Server version:               5.7.28-0ubuntu0.18.04.4 - (Ubuntu)
 -- Server OS:                    Linux
 -- HeidiSQL Version:             9.5.0.5196
@@ -871,7 +871,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `achievements_1` int(11) NOT NULL DEFAULT '1',
   `notes` text CHARACTER SET latin1,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1297 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8;
 
 -- Dumping data users: ~1 rows (approximately)
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
@@ -978,7 +978,7 @@ CREATE TABLE IF NOT EXISTS `users_stats` (
   `show_custom_badge` tinyint(1) NOT NULL DEFAULT '0',
   `current_status` varchar(20000) NOT NULL DEFAULT 'Offline',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1297 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8;
 
 -- Dumping data users_stats: ~1 rows (approximately)
 /*!40000 ALTER TABLE `users_stats` DISABLE KEYS */;
