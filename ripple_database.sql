@@ -2,7 +2,7 @@
 -- Host:                         ainu.pw
 -- Server version:               5.7.28-0ubuntu0.18.04.4 - (Ubuntu)
 -- Server OS:                    Linux
--- HeidiSQL Version:             9.5.0.5196
+-- osu!Ainu DB structure by Hazuki-san
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -179,7 +179,6 @@ INSERT INTO `badges` (`id`, `name`, `icon`) VALUES
 	(5, 'Beatmap Nominators', 'chart line'),
 	(10, 'SUSPICIOUS - WAITING FOR CHECK', 'red window close outline'),
 	(30, 'Chat Moderators', 'envelope outline'),
-	(999, '黐㞗線', 'fa-plane'),
 	(1000, 'Thumbnail Maker', 'fa-thumbs-o-up'),
 	(1001, 'Marathon Runner', 'yellow hourglass outline'),
 	(1002, 'Donor', 'yellow heart'),
@@ -256,7 +255,7 @@ CREATE TABLE IF NOT EXISTS `bancho_settings` (
 INSERT INTO `bancho_settings` (`id`, `name`, `value_int`, `value_string`) VALUES
 	(1, 'bancho_maintenance', 0, ''),
 	(2, 'free_direct', 1, ''),
-	(3, 'menu_icon', 1, 'https://i.ppy.sh/logo.png | https://ripple.pw'),
+	(3, 'menu_icon', 1, 'https://i.ppy.sh/logo.png | https://ainu.pw'),
 	(4, 'login_messages', 1, ''),
 	(5, 'restricted_joke', 0, 'You\'re banned from the server.'),
 	(6, 'login_notification', 1, 'Welcome to Ainu!'),
@@ -608,7 +607,7 @@ INSERT INTO `privileges_groups` (`id`, `name`, `privileges`, `color`) VALUES
 	(9, 'Pending', 1048576, 'default'),
 	(10, 'Restricted', 2, ''),
 	(11, 'Beatmap Nominator', 267, 'primary'),
-	(12, 'lnw', 3145727, 'info'),
+	(12, 'Owner', 3145727, 'info'),
 	(13, 'Community Manager', 918015, 'success');
 /*!40000 ALTER TABLE `privileges_groups` ENABLE KEYS */;
 
@@ -823,11 +822,7 @@ INSERT INTO `system_settings` (`id`, `name`, `value_int`, `value_string`) VALUES
 	(3, 'website_global_alert', 0, ''),
 	(4, 'website_home_alert', 0, ''),
 	(5, 'registrations_enabled', 1, ''),
-	(6, 'aql_threshold_std', 0, '1333.77'),
-	(7, 'aql_threshold_taiko', 0, '1333.77'),
-	(8, 'aql_threshold_ctb', 0, '1333.77'),
-	(9, 'aql_threshold_mania', 0, '1333.77'),
-	(10, 'ccreation_enabled', 1, '');
+	(6, 'ccreation_enabled', 1, '');
 /*!40000 ALTER TABLE `system_settings` ENABLE KEYS */;
 
 -- Dumping structure tokens
