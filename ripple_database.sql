@@ -742,7 +742,7 @@ CREATE TABLE IF NOT EXISTS `rx_stats` (
   `unrestricted_pp` int(11) NOT NULL DEFAULT '0',
   `ppboard` int(11) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8;
 
 -- Dumping data rx_stats: ~0 rows (approximately)
 /*!40000 ALTER TABLE `rx_stats` DISABLE KEYS */;
