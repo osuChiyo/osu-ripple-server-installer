@@ -9,7 +9,7 @@ This Installer just install most things for server! If you want to use custom mo
 It's my Ripple auto installer because I'm lazy to write very very looooooong command to setup it. So I decided to make my own installer!
 
 # How to use it?
-It's simple. Firstly, you need to download it by either downloading it from GitHub, or running this command to download: `wget https://raw.githubusercontent.com/Hazuki-san/ripple-auto-installer/master/installer.sh`
+It's simple. Firstly, you need to download it by either downloading it from GitHub, or running this command to download: `wget https://raw.githubusercontent.com/osuthailand/ripple-auto-installer/master/installer.sh`
 
 After you do this, copy, paste and run the command: `chmod +x installer.sh && ./installer.sh`, and it will take you into the install process!
 
