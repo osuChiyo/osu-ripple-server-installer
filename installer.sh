@@ -139,7 +139,7 @@ wget -O nginx.conf https://pastebin.com/raw/9aduuq4e
 sed -i 's#include /root/ripple/nginx/*.conf\*#include '$MasterDir'/nginx/*.conf#' /etc/nginx/nginx.conf
 cd $MasterDir
 cd nginx
-wget -O nginx.conf https://pastebin.com/raw/MPeRvhuK
+wget -O nginx.conf https://pastebin.com/raw/iTbFALXS
 sed -i 's#DOMAIN#'$domain'#g; s#DIRECTORY#'$MasterDir'#g; s#6969#'$hanayo_port'#g' nginx.conf
 wget -O old-frontend.conf https://pastebin.com/raw/mRPFLYFE
 sed -i 's#DOMAIN#'$domain'#g; s#DIRECTORY#'$MasterDir'#g; s#6969#'$hanayo_port'#g' old-frontend.conf
