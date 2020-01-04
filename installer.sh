@@ -41,9 +41,6 @@ printf "\n\n..:: LETS SERVER::.."
 printf "\nosuapi-apikey [YOUR_OSU_API_KEY_HERE]: "
 read lets_osuapikey
 lets_osuapikey=${lets_osuapikey:=YOUR_OSU_API_KEY_HERE}
-printf "\nPP Cap [700]: "
-read pp_cap
-pp_cap=${pp_cap:=700}
 
 printf "\n\n..:: FRONTEND ::.."
 printf "\nPort [6969]: "
@@ -54,9 +51,9 @@ read hanayo_apisecret
 hanayo_apisecret=${hanayo_apisecret:=Potato}
 
 printf "\n\n..:: DATABASE ::.."
-printf "\nUsername [root]: "
+printf "\nUsername [aoba]: "
 read mysql_usr
-mysql_usr=${mysql_usr:=root}
+mysql_usr=${mysql_usr:=aoba}
 printf "\nPassword [meme]: "
 read mysql_psw
 mysql_psw=${mysql_psw:=meme}
@@ -98,15 +95,9 @@ git clone https://github.com/osuthailand/pep.py
 cd pep.py
 git submodule init && git submodule update
 python3.6 -m pip install -r requirements.txt
-# CREDIT PART (if you hates me... remove these line)
-cd handlers
-rm -rf mainHandler.pyx
-wget -O mainHandler.pyx https://pastebin.com/raw/HG9Khfux
-cd ..
-# remove till this
 python3.6 setup.py build_ext --inplace
 python3.6 pep.py
-sed -i 's#root#'$mysql_usr'#g; s#changeme#'$peppy_cikey'#g'; s#http://.../letsapi#'http://127.0.0.1:5002/letsapi'#g; s#http://cheesegu.ll/api#'https://cg.mxr.lol/api'#g' config.ini
+sed -i 's#root#'$mysql_usr'#g; s#changeme#'$peppy_cikey'#g'; s#http://.../letsapi#'http://127.0.0.1:5002/letsapi'#g; s#http://cheesegu.ll/api#'https://storage.ainu.pw/api'#g' config.ini
 sed -E -i -e 'H;1h;$!d;x' config.ini -e 's#password = #password = '$mysql_psw'#'
 cd $MasterDir
 echo "Bancho Server setup is done!"
@@ -119,11 +110,6 @@ git submodule init && git submodule update
 echo "Downloading patches"
 cd ./pp/oppai-ng/ && chmod +x ./build && ./build && cd ./../../
 cd ./pp/oppai-ng/ && chmod +x ./build && ./build && cd ./../../
-cd pp
-rm -rf __init__.py
-wget -O __init__.py https://pastebin.com/raw/gKaPU6C6
-wget -O wifipiano2.py https://pastebin.com/raw/ZraV7iU9
-cd ..
 # difficulty_ctb fix
 cd $MasterDir/lets/objects
 sed -i 's#dataCtb["difficultyrating"]#'dataCtb["diff_aim"]'#g' beatmap.pyx
@@ -175,13 +161,14 @@ echo "Database setup is done!"
 echo "Setting up hanayo..."
 mkdir hanayo
 cd hanayo
-go get -u zxq.co/ripple/hanayo
+go get -u github.com/osuthailand/hanayo
+
 mv /root/go/bin/hanayo ./
-mv /root/go/src/zxq.co/ripple/hanayo/data ./data
-mv /root/go/src/zxq.co/ripple/hanayo/scripts ./scripts
-mv /root/go/src/zxq.co/ripple/hanayo/static ./static
-mv /root/go/src/zxq.co/ripple/hanayo/templates ./templates
-mv /root/go/src/zxq.co/ripple/hanayo/website-docs ./website-docs
+mv /root/go/src/github.com/osuthailand/hanayo/data ./data
+mv /root/go/src/github.com/osuthailand/hanayo/scripts ./scripts
+mv /root/go/src/github.com/osuthailand/hanayo/static ./static
+mv /root/go/src/github.com/osuthailand/hanayo/templates ./templates
+mv /root/go/src/github.com/osuthailand/hanayo/website-docs ./website-docs
 sed -i 's#ripple.moe#'$domain'#' templates/navbar.html
 ./hanayo
 sed -i 's#ListenTo=#ListenTo=127.0.0.1:'$hanayo_port'#g; s#AvatarURL=#AvatarURL=https://a.'$domain'#g; s#BaseURL=#BaseURL=https://'$domain'#g; s#APISecret=#APISecret='$hanayo_apisecret'#g; s#BanchoAPI=#BanchoAPI=https://c.'$domain'#g; s#MainRippleFolder=#MainRippleFolder='$MasterDir'#g; s#AvatarFolder=#AvatarFolder='$MasterDir'/nginx/avatar-server/avatars#g; s#RedisEnable=false#RedisEnable=true#g' hanayo.conf
@@ -198,34 +185,26 @@ go get -u github.com/osuthailand/api
 rm -rf /root/go/src/github.com/osuthailand
 mv /root/go/src/github.com/osuthailand /root/go/src/github.com/osuthailand
 go build github.com/osuthailand/api
-mv /root/go/bin/rippleapi ./
+mv /root/go/bin/api ./
 ./api
 sed -i 's#root@#'$mysql_usr':'$mysql_psw'@#g; s#Potato#'$hanayo_apisecret'#g; s#OsuAPIKey=#OsuAPIKey='$peppy_cikey'#g' api.conf
 cd $MasterDir
 echo "API setup is done!"
 
 echo "Setting up avatar server..."
-go get -u zxq.co/Sunpy/avatar-server-go
-mkdir avatar-server
-mkdir avatar-server/avatars
-mv /root/go/bin/avatar-server-go ./avatar-server/avatar-server
-cd $MasterDir/avatar-server/avatars
-# DEFAULT AVATAR
-wget -O 0.png https://raw.githubusercontent.com/osuthailand/avatar-server/master/avatars/-1.png
-# AC AVATAR
-wget -O 999.png https://raw.githubusercontent.com/osuthailand/avatar-server/master/avatars/0.png
-cd $MasterDir
+git clone https://github.com/osuthailand/avatar-server
+python3.6 -m pip install Flask
 echo "Avatar Server setup is done!"
 
 echo "Setting up backend..."
 cd /var/www/
-git clone https://zxq.co/ripple/old-frontend.git
+git clone https://github.com/osuthailand/old-frontend
 mv old-frontend osu.ppy.sh
 cd osu.ppy.sh
 curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 cd inc
 cp config.sample.php config.php
-sed -i 's#root#'$mysql_usr'#g; s#meme#'$mysql_psw'#g; s#allora#ripple#g; s#ripple.moe#'$domain'#g' config.php
+sed -i 's#root#'$mysql_usr'#g; s#meme#'$mysql_psw'#g; s#allora#ripple#g; s#"redis"#"localhost"#g; s#ripple.moe#'$domain'#g' config.php
 cd ..
 composer install
 rm -rf secret
