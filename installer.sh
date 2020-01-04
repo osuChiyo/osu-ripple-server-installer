@@ -1,7 +1,7 @@
 #!/bin/bash
 clear
 # THIS SCRIPT IS ORIGINALLY FROM SUNPY #
-printf "This script has to run in sudo mode.\nIf this isn't the case CTRL+C now.\nAlso please don't install this in /root/ but whatever I installed it but I don't really care anyway.\nThis is also meant to be used on a fresh Ubuntu 16.04 install but you can use other OS anyway because this creates a new database etc.\nThis installer is simplistic as its just something I put together so I could easily recreate the server once things change or when I move server around for testing etc.\n\t- Aoba\n"
+printf "Advanced users only. I guess."
 
 server-install () {
 
@@ -139,9 +139,9 @@ wget -O nginx.conf https://pastebin.com/raw/9aduuq4e
 sed -i 's#include /root/ripple/nginx/*.conf\*#include '$MasterDir'/nginx/*.conf#' /etc/nginx/nginx.conf
 cd $MasterDir
 cd nginx
-wget -O nginx.conf https://pastebin.com/raw/B4hWMmZn
+wget -O nginx.conf https://pastebin.com/raw/MPeRvhuK
 sed -i 's#DOMAIN#'$domain'#g; s#DIRECTORY#'$MasterDir'#g; s#6969#'$hanayo_port'#g' nginx.conf
-wget -O old-frontend.conf https://pastebin.com/raw/bMXE2m6n
+wget -O old-frontend.conf https://pastebin.com/raw/U7p26HGc
 sed -i 's#DOMAIN#'$domain'#g; s#DIRECTORY#'$MasterDir'#g; s#6969#'$hanayo_port'#g' old-frontend.conf
 echo "Downloading certificate..."
 wget -O cert.pem https://raw.githubusercontent.com/osuthailand/ainu-certificate/master/cert.pem
