@@ -114,7 +114,6 @@ cd ./pp/oppai-ng/ && chmod +x ./build && ./build && cd ./../../
 cd $MasterDir/lets/objects
 sed -i 's#dataCtb["difficultyrating"]#'dataCtb["diff_aim"]'#g' beatmap.pyx
 cd $MasterDir/lets
-git clone https://github.com/osufx/secret
 cd secret
 git submodule init && git submodule update
 cd ..
