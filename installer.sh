@@ -223,7 +223,7 @@ git clone https://github.com/Neilpang/acme.sh
 apt-get install socat -y
 cd acme.sh/
 ./acme.sh --install
-./acme.sh --issue --standalone -d $domain -d c.$domain -d i.$domain -d a.$domain -s s.$domain -d old.$domain
+./acme.sh --issue --standalone -d $domain -d c.$domain -d i.$domain -d a.$domain -d s.$domain -d old.$domain
 echo "Certificate is ready!"
 
 echo "Changing folder and files permissions"
