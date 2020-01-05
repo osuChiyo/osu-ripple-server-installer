@@ -180,10 +180,6 @@ echo "Setting up API..."
 mkdir rippleapi
 cd rippleapi
 go get -u github.com/osuthailand/api
-#Ugly fix?
-rm -rf /root/go/src/github.com/osuthailand
-mv /root/go/src/github.com/osuthailand /root/go/src/github.com/osuthailand
-go build github.com/osuthailand/api
 mv /root/go/bin/api ./
 ./api
 sed -i 's#root@#'$mysql_usr':'$mysql_psw'@#g; s#Potato#'$hanayo_apisecret'#g; s#OsuAPIKey=#OsuAPIKey='$peppy_cikey'#g' api.conf
