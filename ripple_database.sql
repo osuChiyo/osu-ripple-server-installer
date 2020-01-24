@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS `2fa` (
   PRIMARY KEY (`userid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table 2fa: ~0 rows (approximately)
+-- Dumping data 2fa: ~0 rows (approximately)
 /*!40000 ALTER TABLE `2fa` DISABLE KEYS */;
 /*!40000 ALTER TABLE `2fa` ENABLE KEYS */;
 
@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `2fa_telegram` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table 2fa_telegram: ~0 rows (approximately)
+-- Dumping data 2fa_telegram: ~0 rows (approximately)
 /*!40000 ALTER TABLE `2fa_telegram` DISABLE KEYS */;
 /*!40000 ALTER TABLE `2fa_telegram` ENABLE KEYS */;
 
@@ -45,7 +45,7 @@ CREATE TABLE IF NOT EXISTS `2fa_totp` (
   PRIMARY KEY (`userid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table 2fa_totp: ~0 rows (approximately)
+-- Dumping data 2fa_totp: ~0 rows (approximately)
 /*!40000 ALTER TABLE `2fa_totp` DISABLE KEYS */;
 /*!40000 ALTER TABLE `2fa_totp` ENABLE KEYS */;
 
@@ -59,7 +59,7 @@ CREATE TABLE IF NOT EXISTS `achievements` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table achievements: ~97 rows (approximately)
+-- Dumping data achievements: ~97 rows (approximately)
 /*!40000 ALTER TABLE `achievements` DISABLE KEYS */;
 INSERT IGNORE INTO `achievements` (`id`, `name`, `description`, `icon`, `version`) VALUES
 	(1, '500 Combo (osu!std)', '500 big ones! You\'re moving up in the world!', 'osu-combo-500', 1),
@@ -168,9 +168,9 @@ CREATE TABLE IF NOT EXISTS `anticheat_reports` (
   `score_id` int(11) NOT NULL,
   `severity` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
 
--- Dumping data for table anticheat_reports: ~0 rows (approximately)
+-- Dumping data anticheat_reports: ~0 rows (approximately)
 /*!40000 ALTER TABLE `anticheat_reports` DISABLE KEYS */;
 /*!40000 ALTER TABLE `anticheat_reports` ENABLE KEYS */;
 
@@ -182,7 +182,7 @@ CREATE TABLE IF NOT EXISTS `badges` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1014 DEFAULT CHARSET=utf8;
 
--- Dumping data for table badges: ~21 rows (approximately)
+-- Dumping data badges: ~21 rows (approximately)
 /*!40000 ALTER TABLE `badges` DISABLE KEYS */;
 INSERT IGNORE INTO `badges` (`id`, `name`, `icon`) VALUES
 	(0, '', ''),
@@ -221,7 +221,7 @@ CREATE TABLE IF NOT EXISTS `bancho_channels` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
--- Dumping data for table bancho_channels: ~7 rows (approximately)
+-- Dumping data bancho_channels: ~7 rows (approximately)
 /*!40000 ALTER TABLE `bancho_channels` DISABLE KEYS */;
 INSERT IGNORE INTO `bancho_channels` (`id`, `name`, `description`, `public_read`, `public_write`, `status`, `temp`, `hidden`) VALUES
 	(1, '#osu', 'Ainu global chat', 1, 1, 1, 0, 0),
@@ -244,7 +244,7 @@ CREATE TABLE IF NOT EXISTS `bancho_messages` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table bancho_messages: ~0 rows (approximately)
+-- Dumping data bancho_messages: ~0 rows (approximately)
 /*!40000 ALTER TABLE `bancho_messages` DISABLE KEYS */;
 /*!40000 ALTER TABLE `bancho_messages` ENABLE KEYS */;
 
@@ -259,7 +259,7 @@ CREATE TABLE IF NOT EXISTS `bancho_private_messages` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table bancho_private_messages: ~0 rows (approximately)
+-- Dumping data bancho_private_messages: ~0 rows (approximately)
 /*!40000 ALTER TABLE `bancho_private_messages` DISABLE KEYS */;
 /*!40000 ALTER TABLE `bancho_private_messages` ENABLE KEYS */;
 
@@ -272,7 +272,7 @@ CREATE TABLE IF NOT EXISTS `bancho_settings` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
--- Dumping data for table bancho_settings: ~8 rows (approximately)
+-- Dumping data bancho_settings: ~8 rows (approximately)
 /*!40000 ALTER TABLE `bancho_settings` DISABLE KEYS */;
 INSERT IGNORE INTO `bancho_settings` (`id`, `name`, `value_int`, `value_string`) VALUES
 	(1, 'bancho_maintenance', 0, ''),
@@ -302,7 +302,7 @@ CREATE TABLE IF NOT EXISTS `bancho_tokens` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table bancho_tokens: ~0 rows (approximately)
+-- Dumping data bancho_tokens: ~0 rows (approximately)
 /*!40000 ALTER TABLE `bancho_tokens` DISABLE KEYS */;
 /*!40000 ALTER TABLE `bancho_tokens` ENABLE KEYS */;
 
@@ -340,7 +340,7 @@ CREATE TABLE IF NOT EXISTS `beatmaps` (
   KEY `id_2` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
 
--- Dumping data for table beatmaps: ~0 rows (approximately)
+-- Dumping data beatmaps: ~0 rows (approximately)
 /*!40000 ALTER TABLE `beatmaps` DISABLE KEYS */;
 /*!40000 ALTER TABLE `beatmaps` ENABLE KEYS */;
 
@@ -352,7 +352,7 @@ CREATE TABLE IF NOT EXISTS `beatmaps_names` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table beatmaps_names: ~0 rows (approximately)
+-- Dumping data beatmaps_names: ~0 rows (approximately)
 /*!40000 ALTER TABLE `beatmaps_names` DISABLE KEYS */;
 /*!40000 ALTER TABLE `beatmaps_names` ENABLE KEYS */;
 
@@ -365,7 +365,7 @@ CREATE TABLE IF NOT EXISTS `beatmaps_rating` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
 
--- Dumping data for table beatmaps_rating: ~0 rows (approximately)
+-- Dumping data beatmaps_rating: ~0 rows (approximately)
 /*!40000 ALTER TABLE `beatmaps_rating` DISABLE KEYS */;
 /*!40000 ALTER TABLE `beatmaps_rating` ENABLE KEYS */;
 
@@ -380,7 +380,7 @@ CREATE TABLE IF NOT EXISTS `clans` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
 
--- Dumping data for table clans: ~37 rows (approximately)
+-- Dumping data clans: ~37 rows (approximately)
 /*!40000 ALTER TABLE `clans` DISABLE KEYS */;
 /*!40000 ALTER TABLE `clans` ENABLE KEYS */;
 
@@ -392,7 +392,7 @@ CREATE TABLE IF NOT EXISTS `clans_invites` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
 
--- Dumping data for table clans_invites: ~16 rows (approximately)
+-- Dumping data clans_invites: ~16 rows (approximately)
 /*!40000 ALTER TABLE `clans_invites` DISABLE KEYS */;
 /*!40000 ALTER TABLE `clans_invites` ENABLE KEYS */;
 
@@ -411,7 +411,7 @@ CREATE TABLE IF NOT EXISTS `comments` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
 
--- Dumping data for table comments: ~10 rows (approximately)
+-- Dumping data comments: ~10 rows (approximately)
 /*!40000 ALTER TABLE `comments` DISABLE KEYS */;
 /*!40000 ALTER TABLE `comments` ENABLE KEYS */;
 
@@ -425,7 +425,7 @@ CREATE TABLE IF NOT EXISTS `docs` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
--- Dumping data for table docs: 0 rows
+-- Dumping data docs: 0 rows
 /*!40000 ALTER TABLE `docs` DISABLE KEYS */;
 /*!40000 ALTER TABLE `docs` ENABLE KEYS */;
 
@@ -442,7 +442,7 @@ CREATE TABLE IF NOT EXISTS `hw_user` (
   UNIQUE KEY `userid` (`userid`)
 ) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
 
--- Dumping data for table hw_user: ~0 rows (approximately)
+-- Dumping data hw_user: ~0 rows (approximately)
 /*!40000 ALTER TABLE `hw_user` DISABLE KEYS */;
 /*!40000 ALTER TABLE `hw_user` ENABLE KEYS */;
 
@@ -453,7 +453,7 @@ CREATE TABLE IF NOT EXISTS `identity_tokens` (
   UNIQUE KEY `userid` (`userid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table identity_tokens: ~561 rows (approximately)
+-- Dumping data identity_tokens: ~561 rows (approximately)
 /*!40000 ALTER TABLE `identity_tokens` DISABLE KEYS */;
 /*!40000 ALTER TABLE `identity_tokens` ENABLE KEYS */;
 
@@ -466,7 +466,7 @@ CREATE TABLE IF NOT EXISTS `ip_user` (
   UNIQUE KEY `userid` (`userid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table ip_user: ~561 rows (approximately)
+-- Dumping data ip_user: ~561 rows (approximately)
 /*!40000 ALTER TABLE `ip_user` DISABLE KEYS */;
 /*!40000 ALTER TABLE `ip_user` ENABLE KEYS */;
 
@@ -477,7 +477,7 @@ CREATE TABLE IF NOT EXISTS `irc_tokens` (
   UNIQUE KEY `userid` (`userid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table irc_tokens: ~7 rows (approximately)
+-- Dumping data irc_tokens: ~7 rows (approximately)
 /*!40000 ALTER TABLE `irc_tokens` DISABLE KEYS */;
 /*!40000 ALTER TABLE `irc_tokens` ENABLE KEYS */;
 
@@ -489,7 +489,7 @@ CREATE TABLE IF NOT EXISTS `leaderboard_ctb` (
   PRIMARY KEY (`position`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table leaderboard_ctb: ~0 rows (approximately)
+-- Dumping data leaderboard_ctb: ~0 rows (approximately)
 /*!40000 ALTER TABLE `leaderboard_ctb` DISABLE KEYS */;
 /*!40000 ALTER TABLE `leaderboard_ctb` ENABLE KEYS */;
 
@@ -501,7 +501,7 @@ CREATE TABLE IF NOT EXISTS `leaderboard_mania` (
   PRIMARY KEY (`position`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table leaderboard_mania: ~0 rows (approximately)
+-- Dumping data leaderboard_mania: ~0 rows (approximately)
 /*!40000 ALTER TABLE `leaderboard_mania` DISABLE KEYS */;
 /*!40000 ALTER TABLE `leaderboard_mania` ENABLE KEYS */;
 
@@ -513,7 +513,7 @@ CREATE TABLE IF NOT EXISTS `leaderboard_std` (
   PRIMARY KEY (`position`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table leaderboard_std: ~0 rows (approximately)
+-- Dumping data leaderboard_std: ~0 rows (approximately)
 /*!40000 ALTER TABLE `leaderboard_std` DISABLE KEYS */;
 /*!40000 ALTER TABLE `leaderboard_std` ENABLE KEYS */;
 
@@ -525,7 +525,7 @@ CREATE TABLE IF NOT EXISTS `leaderboard_taiko` (
   PRIMARY KEY (`position`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table leaderboard_taiko: ~0 rows (approximately)
+-- Dumping data leaderboard_taiko: ~0 rows (approximately)
 /*!40000 ALTER TABLE `leaderboard_taiko` DISABLE KEYS */;
 /*!40000 ALTER TABLE `leaderboard_taiko` ENABLE KEYS */;
 
@@ -539,7 +539,7 @@ CREATE TABLE IF NOT EXISTS `main_menu_icons` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
--- Dumping data for table main_menu_icons: ~0 rows (approximately)
+-- Dumping data main_menu_icons: ~0 rows (approximately)
 /*!40000 ALTER TABLE `main_menu_icons` DISABLE KEYS */;
 INSERT IGNORE INTO `main_menu_icons` (`id`, `is_current`, `file_id`, `name`, `url`) VALUES
 	(1, 1, 'logo', 'Ainu!', 'https://ainu.pw/');
@@ -553,7 +553,7 @@ CREATE TABLE IF NOT EXISTS `osin_access` (
   `extra` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table osin_access: ~0 rows (approximately)
+-- Dumping data osin_access: ~0 rows (approximately)
 /*!40000 ALTER TABLE `osin_access` DISABLE KEYS */;
 /*!40000 ALTER TABLE `osin_access` ENABLE KEYS */;
 
@@ -566,7 +566,7 @@ CREATE TABLE IF NOT EXISTS `osin_client` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table osin_client: ~0 rows (approximately)
+-- Dumping data osin_client: ~0 rows (approximately)
 /*!40000 ALTER TABLE `osin_client` DISABLE KEYS */;
 /*!40000 ALTER TABLE `osin_client` ENABLE KEYS */;
 
@@ -576,7 +576,7 @@ CREATE TABLE IF NOT EXISTS `osin_client_user` (
   `user` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table osin_client_user: ~0 rows (approximately)
+-- Dumping data osin_client_user: ~0 rows (approximately)
 /*!40000 ALTER TABLE `osin_client_user` DISABLE KEYS */;
 /*!40000 ALTER TABLE `osin_client_user` ENABLE KEYS */;
 
@@ -589,7 +589,7 @@ CREATE TABLE IF NOT EXISTS `password_recovery` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
 
--- Dumping data for table password_recovery: 17 rows
+-- Dumping data password_recovery: 17 rows
 /*!40000 ALTER TABLE `password_recovery` DISABLE KEYS */;
 /*!40000 ALTER TABLE `password_recovery` ENABLE KEYS */;
 
@@ -603,7 +603,7 @@ CREATE TABLE IF NOT EXISTS `privileges_groups` (
   UNIQUE KEY `name` (`name`)
 ) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
--- Dumping data for table privileges_groups: ~14 rows (approximately)
+-- Dumping data privileges_groups: ~14 rows (approximately)
 /*!40000 ALTER TABLE `privileges_groups` DISABLE KEYS */;
 INSERT IGNORE INTO `privileges_groups` (`id`, `name`, `privileges`, `color`) VALUES
 	(1, 'Banned', 0, ''),
@@ -631,7 +631,7 @@ CREATE TABLE IF NOT EXISTS `profile_backgrounds` (
   PRIMARY KEY (`uid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table profile_backgrounds: ~10 rows (approximately)
+-- Dumping data profile_backgrounds: ~10 rows (approximately)
 /*!40000 ALTER TABLE `profile_backgrounds` DISABLE KEYS */;
 /*!40000 ALTER TABLE `profile_backgrounds` ENABLE KEYS */;
 
@@ -647,7 +647,7 @@ CREATE TABLE IF NOT EXISTS `rank_requests` (
   UNIQUE KEY `bid` (`bid`)
 ) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
 
--- Dumping data for table rank_requests: ~46 rows (approximately)
+-- Dumping data rank_requests: ~46 rows (approximately)
 /*!40000 ALTER TABLE `rank_requests` DISABLE KEYS */;
 /*!40000 ALTER TABLE `rank_requests` ENABLE KEYS */;
 
@@ -661,7 +661,7 @@ CREATE TABLE IF NOT EXISTS `rap_logs` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
 
--- Dumping data for table rap_logs: ~632 rows (approximately)
+-- Dumping data rap_logs: ~632 rows (approximately)
 /*!40000 ALTER TABLE `rap_logs` DISABLE KEYS */;
 /*!40000 ALTER TABLE `rap_logs` ENABLE KEYS */;
 
@@ -674,7 +674,7 @@ CREATE TABLE IF NOT EXISTS `remember` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
 
--- Dumping data for table remember: ~14 rows (approximately)
+-- Dumping data remember: ~14 rows (approximately)
 /*!40000 ALTER TABLE `remember` DISABLE KEYS */;
 /*!40000 ALTER TABLE `remember` ENABLE KEYS */;
 
@@ -690,7 +690,7 @@ CREATE TABLE IF NOT EXISTS `reports` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
 
--- Dumping data for table reports: ~1 rows (approximately)
+-- Dumping data reports: ~1 rows (approximately)
 /*!40000 ALTER TABLE `reports` DISABLE KEYS */;
 /*!40000 ALTER TABLE `reports` ENABLE KEYS */;
 
@@ -705,7 +705,7 @@ CREATE TABLE IF NOT EXISTS `rx_beatmap_playcount` (
   UNIQUE KEY `playcount_index` (`user_id`,`beatmap_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
 
--- Dumping data for table rx_beatmap_playcount: ~9,103 rows (approximately)
+-- Dumping data rx_beatmap_playcount: ~9,103 rows (approximately)
 /*!40000 ALTER TABLE `rx_beatmap_playcount` DISABLE KEYS */;
 /*!40000 ALTER TABLE `rx_beatmap_playcount` ENABLE KEYS */;
 
@@ -755,7 +755,7 @@ CREATE TABLE IF NOT EXISTS `rx_stats` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8;
 
--- Dumping data for table rx_stats: ~565 rows (approximately)
+-- Dumping data rx_stats: ~565 rows (approximately)
 /*!40000 ALTER TABLE `rx_stats` DISABLE KEYS */;
 INSERT IGNORE INTO `rx_stats` (`id`, `username`, `username_aka`, `user_color`, `user_style`, `favourite_mode`, `level_std`, `level_taiko`, `level_mania`, `level_ctb`, `total_score_std`, `total_score_taiko`, `total_score_mania`, `total_score_ctb`, `total_hits_std`, `total_hits_taiko`, `total_hits_ctb`, `total_hits_mania`, `playtime_std`, `playtime_taiko`, `playtime_mania`, `playtime_ctb`, `ranked_score_std`, `ranked_score_taiko`, `ranked_score_mania`, `ranked_score_ctb`, `avg_accuracy_std`, `avg_accuracy_taiko`, `avg_accuracy_mania`, `avg_accuracy_ctb`, `playcount_std`, `playcount_taiko`, `playcount_mania`, `playcount_ctb`, `pp_std`, `pp_mania`, `pp_ctb`, `pp_taiko`, `country`, `unrestricted_pp`, `ppboard`) VALUES
 	(999, 'AC', '', 'black', '', 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'JP', 1, 1);
@@ -785,7 +785,7 @@ CREATE TABLE IF NOT EXISTS `scores` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
 
--- Dumping data for table scores: ~33,811 rows (approximately)
+-- Dumping data scores: ~33,811 rows (approximately)
 /*!40000 ALTER TABLE `scores` DISABLE KEYS */;
 /*!40000 ALTER TABLE `scores` ENABLE KEYS */;
 
@@ -813,7 +813,7 @@ CREATE TABLE IF NOT EXISTS `scores_relax` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1073741824 DEFAULT CHARSET=utf8;
 
--- Dumping data for table scores_relax: ~37,441 rows (approximately)
+-- Dumping data scores_relax: ~37,441 rows (approximately)
 /*!40000 ALTER TABLE `scores_relax` DISABLE KEYS */;
 /*!40000 ALTER TABLE `scores_relax` ENABLE KEYS */;
 
@@ -826,7 +826,7 @@ CREATE TABLE IF NOT EXISTS `system_settings` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
--- Dumping data for table system_settings: ~10 rows (approximately)
+-- Dumping data system_settings: ~10 rows (approximately)
 /*!40000 ALTER TABLE `system_settings` DISABLE KEYS */;
 INSERT IGNORE INTO `system_settings` (`id`, `name`, `value_int`, `value_string`) VALUES
 	(1, 'website_maintenance', 0, ''),
@@ -834,11 +834,7 @@ INSERT IGNORE INTO `system_settings` (`id`, `name`, `value_int`, `value_string`)
 	(3, 'website_global_alert', 0, ''),
 	(4, 'website_home_alert', 0, ''),
 	(5, 'registrations_enabled', 1, ''),
-	(6, 'aql_threshold_std', 0, '1333.77'),
-	(7, 'aql_threshold_taiko', 0, '1333.77'),
-	(8, 'aql_threshold_ctb', 0, '1333.77'),
-	(9, 'aql_threshold_mania', 0, '1333.77'),
-	(10, 'ccreation_enabled', 1, '');
+	(6, 'ccreation_enabled', 1, '');
 /*!40000 ALTER TABLE `system_settings` ENABLE KEYS */;
 
 -- Dumping structure for table tokens
@@ -853,7 +849,7 @@ CREATE TABLE IF NOT EXISTS `tokens` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
 
--- Dumping data for table tokens: ~486 rows (approximately)
+-- Dumping data tokens: ~486 rows (approximately)
 /*!40000 ALTER TABLE `tokens` DISABLE KEYS */;
 /*!40000 ALTER TABLE `tokens` ENABLE KEYS */;
 
@@ -885,7 +881,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8;
 
--- Dumping data for table users: ~565 rows (approximately)
+-- Dumping data users: ~565 rows (approximately)
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT IGNORE INTO `users` (`id`, `osuver`, `username`, `username_safe`, `ban_datetime`, `password_md5`, `salt`, `email`, `register_datetime`, `rank`, `allowed`, `latest_activity`, `silence_end`, `silence_reason`, `password_version`, `privileges`, `donor_expire`, `flags`, `achievements_version`, `achievements_0`, `achievements_1`, `notes`, `last_session`) VALUES
 	(999, NULL, 'AC', 'ac', '0', '*0', '5e/AceVLS7jJtxTJA1U6rmVqrWREYg==', 'fo@kab.ot', 1566228790, 4, 1, 1569775752, 0, '', 1, 3145727, 2147483647, 0, 0, 1, 1, '', 'check');
@@ -900,7 +896,7 @@ CREATE TABLE IF NOT EXISTS `users_achievements` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
 
--- Dumping data for table users_achievements: ~4,308 rows (approximately)
+-- Dumping data users_achievements: ~4,308 rows (approximately)
 /*!40000 ALTER TABLE `users_achievements` DISABLE KEYS */;
 /*!40000 ALTER TABLE `users_achievements` ENABLE KEYS */;
 
@@ -915,7 +911,7 @@ CREATE TABLE IF NOT EXISTS `users_beatmap_playcount` (
   UNIQUE KEY `playcount_index` (`user_id`,`beatmap_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
 
--- Dumping data for table users_beatmap_playcount: ~10,717 rows (approximately)
+-- Dumping data users_beatmap_playcount: ~10,717 rows (approximately)
 /*!40000 ALTER TABLE `users_beatmap_playcount` DISABLE KEYS */;
 /*!40000 ALTER TABLE `users_beatmap_playcount` ENABLE KEYS */;
 
@@ -927,7 +923,7 @@ CREATE TABLE IF NOT EXISTS `users_relationships` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
 
--- Dumping data for table users_relationships: ~238 rows (approximately)
+-- Dumping data users_relationships: ~238 rows (approximately)
 /*!40000 ALTER TABLE `users_relationships` DISABLE KEYS */;
 /*!40000 ALTER TABLE `users_relationships` ENABLE KEYS */;
 
@@ -992,7 +988,7 @@ CREATE TABLE IF NOT EXISTS `users_stats` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8;
 
--- Dumping data for table users_stats: ~565 rows (approximately)
+-- Dumping data users_stats: ~565 rows (approximately)
 /*!40000 ALTER TABLE `users_stats` DISABLE KEYS */;
 INSERT IGNORE INTO `users_stats` (`id`, `username`, `username_aka`, `user_color`, `user_style`, `ranked_score_std`, `playcount_std`, `total_score_std`, `replays_watched_std`, `ranked_score_taiko`, `playcount_taiko`, `total_score_taiko`, `replays_watched_taiko`, `ranked_score_ctb`, `playcount_ctb`, `total_score_ctb`, `replays_watched_ctb`, `ranked_score_mania`, `playcount_mania`, `total_score_mania`, `replays_watched_mania`, `total_hits_std`, `total_hits_taiko`, `total_hits_ctb`, `total_hits_mania`, `country`, `unrestricted_pp`, `ppboard`, `show_country`, `level_std`, `level_taiko`, `level_ctb`, `level_mania`, `playtime_std`, `playtime_taiko`, `playtime_ctb`, `playtime_mania`, `avg_accuracy_std`, `avg_accuracy_taiko`, `avg_accuracy_ctb`, `avg_accuracy_mania`, `pp_std`, `pp_taiko`, `pp_ctb`, `pp_mania`, `badges_shown`, `safe_title`, `userpage_content`, `play_style`, `favourite_mode`, `prefer_relax`, `custom_badge_icon`, `custom_badge_name`, `can_custom_badge`, `show_custom_badge`, `current_status`) VALUES
 	(999, 'AC', '', 'black', '', 0, 26956, 237228316533, 6228506, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'JP', 1, 0, 1, 102, 1, 1, 1, 0, 0, 0, 0, 0.000000000000, 0.000000000000, 0.000000000000, 0.000000000000, 0, 0, 0, 0, '3,4,11,0,0,0', 0, '', 0, 0, 0, '', '', 1, 1, '');
@@ -1006,7 +1002,7 @@ CREATE TABLE IF NOT EXISTS `user_badges` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
--- Dumping data for table user_badges: ~47 rows (approximately)
+-- Dumping data user_badges: ~47 rows (approximately)
 /*!40000 ALTER TABLE `user_badges` DISABLE KEYS */;
 INSERT IGNORE INTO `user_badges` (`id`, `user`, `badge`) VALUES
 	(1, 1000, 2),
@@ -1023,9 +1019,9 @@ CREATE TABLE IF NOT EXISTS `user_clans` (
   `clan` int(11) NOT NULL,
   `perms` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=109 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
 
--- Dumping data for table user_clans: ~67 rows (approximately)
+-- Dumping data user_clans: ~67 rows (approximately)
 /*!40000 ALTER TABLE `user_clans` DISABLE KEYS */;
 /*!40000 ALTER TABLE `user_clans` ENABLE KEYS */;
 
