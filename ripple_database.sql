@@ -824,7 +824,7 @@ CREATE TABLE IF NOT EXISTS `system_settings` (
   `value_int` int(11) NOT NULL DEFAULT '0',
   `value_string` varchar(512) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- Dumping data system_settings: ~10 rows (approximately)
 /*!40000 ALTER TABLE `system_settings` DISABLE KEYS */;
