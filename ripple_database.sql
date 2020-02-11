@@ -309,6 +309,7 @@ CREATE TABLE IF NOT EXISTS `bancho_tokens` (
 -- Dumping structure for table beatmaps
 CREATE TABLE IF NOT EXISTS `beatmaps` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `rankedby` varchar(32) NOT NULL DEFAULT 'Bancho',
   `beatmap_id` int(11) NOT NULL DEFAULT '0',
   `beatmapset_id` int(11) NOT NULL DEFAULT '0',
   `beatmap_md5` varchar(32) NOT NULL DEFAULT '',
