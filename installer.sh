@@ -91,7 +91,7 @@ cd ripple
 
 echo "Downloading Bancho server..."
 cd $MasterDir
-git clone https://github.com/osuthailand/pep.py
+git clone https://github.com/coverosu/pep.py
 cd pep.py
 git submodule init && git submodule update
 python3.6 -m pip install -r requirements.txt
